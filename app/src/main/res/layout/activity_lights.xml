@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lights"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawson.mountgoodcontrol.LightsActivity"
+    tools:ignore=""
+    >
+
+
+    <LinearLayout
+        android:id="@+id/buttonSwitches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_padding_switches"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchLights"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchLights"
+            />
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchMusic"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchMusic"
+            android:onClick="startMusic"
+            />
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchMovies"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchMovies"
+            android:onClick="startMovies"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/buttonMainLight"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSwitches"
+        android:onClick="sendData"
+        android:text="@string/buttonMainLight"/>
+
+    <LinearLayout
+        android:id="@+id/moreLights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonMainLight"
+        android:layout_marginBottom="@dimen/bottom_padding_group"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonLamp"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonLamp"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonStorm"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonStorm"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonAggies"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonAggies"/>
+    </LinearLayout>
+<!--
+    <Button
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/buttonFanLight"
+        android:padding="15dp"
+        android:layout_below="@id/moreLights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendData"
+        android:text="@string/buttonFanLight"/>
+
+    <LinearLayout
+        android:id="@+id/fanButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonFanLight"
+        android:layout_marginBottom="@dimen/bottom_padding_group"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonFan0"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonFan0"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonFan1"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonFan1"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonFan2"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonFan2"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonFan3"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonFan3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/clapDetection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fanButtons"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonStartClap"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonStartClap"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonStopClap"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonStopClap"/>
+    </LinearLayout>
+-->
+</RelativeLayout>

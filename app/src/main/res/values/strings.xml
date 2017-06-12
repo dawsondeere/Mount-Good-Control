@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mount Good Control</string>
+    <string name="buttonMainLight">Main Lights</string>
+    <string name="buttonLamp">Lamp</string>
+    <string name="buttonStorm">Stormtroopers</string>
+    <string name="buttonAggies">Aggies</string>
+    <string name="buttonFanLight">Fan Light</string>
+    <string name="buttonFan0">0</string>
+    <string name="buttonFan1">1</string>
+    <string name="buttonFan2">2</string>
+    <string name="buttonFan3">3</string>
+    <string name="buttonStartMusic">Start Music</string>
+    <string name="buttonPlayMusic">Play/Pause Music</string>
+    <string name="buttonNextSong">Next Song</string>
+    <string name="buttonPrevSong">Prev Song</string>
+    <string name="buttonVolDown">Volume Down</string>
+    <string name="buttonVolUp">Volume Up</string>
+    <string name="buttonStopMusic">Stop Music</string>
+    <string name="buttonStartClap">Start Clap Detection</string>
+    <string name="buttonStopClap">Stop Clap Detection</string>
+    <!--
+    <string name="buttonPlayMovie">Play/Pause Movie</string>
+    -->
+    <string name="switchLights">Lights</string>
+    <string name="switchMusic">Music</string>
+    <string name="switchMovies">Movies</string>
+    <string name="textNoSong">No song</string>
+    <string name="textIsPlaying">is playing</string>
+    <string name="textVolume">Volume: ##</string>
+    <string name="textNoBluetooth">This device does not support Bluetooth</string>
+    <string name="textPiNotPaired">The Raspberry Pi is not paired</string>
+    <string name="textPiNotConnected">The Raspberry Pi is not connected</string>
+</resources>

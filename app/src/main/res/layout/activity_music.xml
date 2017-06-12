@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawson.mountgoodcontrol.MusicActivity">
+
+    <LinearLayout
+        android:id="@+id/buttonSwitches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_padding_switches"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchLights"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchLights"
+            android:onClick="startLights"
+            />
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchMusic"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchMusic"
+            />
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonSwitchMovies"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/switchMovies"
+            android:onClick="startMovies"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSwitches"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/textNoSong"
+        />
+
+    <TextView
+        android:id="@+id/songArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songName"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/textIsPlaying"
+        />
+
+    <TextView
+        android:id="@+id/songVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songArtist"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/textVolume"
+        />
+
+    <LinearLayout
+        android:id="@+id/musicControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songVolume"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonPrevSong"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonPrevSong"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonPlayPause"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonPlayMusic"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonNextSong"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonNextSong"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/musicVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/musicControl"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonVolDown"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonVolDown"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonVolUp"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonVolUp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/musicStartStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/musicVolume"
+        android:layout_marginBottom="@dimen/bottom_padding_group"
+        >
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonStartMusic"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonStartMusic"/>
+
+        <Button
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/buttonStopMusic"
+            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="sendData"
+            android:text="@string/buttonStopMusic"/>
+    </LinearLayout>
+
+</RelativeLayout>
