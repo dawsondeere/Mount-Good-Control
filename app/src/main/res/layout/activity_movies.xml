@@ -63,60 +63,72 @@
                 android:id="@+id/moviesRowOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="0dp"
                 >
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Aladdin"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Angels in the Outfield"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Avengers"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:text="Batman Begins"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
-                    android:drawableTop="@drawable/batman_begins"
-                />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="225dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Blind Side"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
-                    android:drawableTop="@drawable/batman_begins"
-                    />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="225dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Batman Begins"
-                    android:drawableTop="@drawable/batman_begins"
-                    />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="225dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Bourne Identity"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
@@ -126,124 +138,702 @@
                 android:id="@+id/moviesRowTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:layout_below="@id/moviesRowOne"
                 >
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Bourne Supremacy"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Bourne Ultimatum"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="A Bug's Life"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:lines="3"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Butch Cassidy and the Sundance Kid"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Cars"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Dark Knight"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/moviesRowThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:layout_below="@id/moviesRowTwo"
                 >
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Dark Knight Rises"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Finding Nemo"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Frozen"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:lines="3"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Sorcerer's Stone"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:lines="3"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Chamber of Secrets"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Prisoner of Azkaban"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowThree"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Goblet of Fire"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Order of the Phoenix"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Half-Blood Prince"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Deathly Hallows part 1"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Harry Potter and the Deathly Hallows part 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Batman Begins"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Home Alone"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowFour"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Incredibles"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Indiana Jones and the Raiders of the Lost Ark"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Indiana Jones and the Temple of Doom"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Indiana Jones and the Last Crusade"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Iron Man"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Iron Man 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowFive"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="It's a Wonderful Life"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Jurassic Park"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Jurassic Park 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Jurassic Park 3"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Lion King"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Lord of the Rings: The Fellowship of the Ring"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowSix"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Lord of the Rings: The Two Towers"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Lord of the Rings: The Return of the King"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Mighty Ducks"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Mighty Ducks 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Mighty Ducks 3"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Miracle on 34th Street"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowEight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowSeven"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Monsters, Inc."
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Pirates of the Caribbean: Curse of the Black Pearl"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Remeber the Titans"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="The Santa Clause"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: The Phantom Menace"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: Attack of the Clones"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowNine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowEight"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: Revenge of the Sith"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: A New Hope"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: The Empire Strikes Back"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="3"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Star Wars: Return of the Jedi"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Toy Story"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Toy Story 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moviesRowTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/moviesRowNine"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Transformers"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="White Christmas"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="X-Men"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="X-Men 2"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="X-Men 3"
+                    android:drawableTop="@drawable/batman_begins"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="235dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="X-Men Origins: Wolverine"
                     android:drawableTop="@drawable/batman_begins"
                     />
 
