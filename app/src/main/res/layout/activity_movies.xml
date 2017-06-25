@@ -67,6 +67,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieAladdin"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -75,9 +76,11 @@
                     android:paddingRight="10dp"
                     android:text="Aladdin"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieAngelsInTheOutfield"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -86,9 +89,11 @@
                     android:paddingRight="10dp"
                     android:text="Angels in the Outfield"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieAvengers"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -97,9 +102,11 @@
                     android:paddingRight="10dp"
                     android:text="Avengers"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieBatmanBegins"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -108,9 +115,11 @@
                     android:paddingRight="10dp"
                     android:text="Batman Begins"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieBlindSide"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -119,9 +128,11 @@
                     android:paddingRight="10dp"
                     android:text="The Blind Side"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieBourneIdentity"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -130,6 +141,7 @@
                     android:paddingRight="10dp"
                     android:text="The Bourne Identity"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -143,6 +155,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieBourneSupremacy"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -151,9 +164,11 @@
                     android:paddingRight="10dp"
                     android:text="The Bourne Supremacy"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieBourneUltimatum"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -162,9 +177,11 @@
                     android:paddingRight="10dp"
                     android:text="The Bourne Ultimatum"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieBugsLife"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -173,9 +190,11 @@
                     android:paddingRight="10dp"
                     android:text="A Bug's Life"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieButchCassidy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -185,9 +204,11 @@
                     android:paddingRight="10dp"
                     android:text="Butch Cassidy and the Sundance Kid"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieCars"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -196,9 +217,11 @@
                     android:paddingRight="10dp"
                     android:text="Cars"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieDarkKnight"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -207,6 +230,7 @@
                     android:paddingRight="10dp"
                     android:text="The Dark Knight"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -220,6 +244,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieDarkKnightRises"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -228,9 +253,11 @@
                     android:paddingRight="10dp"
                     android:text="The Dark Knight Rises"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieFindingNemo"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -239,9 +266,11 @@
                     android:paddingRight="10dp"
                     android:text="Finding Nemo"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieFrozen"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -250,9 +279,11 @@
                     android:paddingRight="10dp"
                     android:text="Frozen"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter01"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -262,9 +293,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Sorcerer's Stone"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter02"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -274,9 +307,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Chamber of Secrets"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter03"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -286,6 +321,7 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Prisoner of Azkaban"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -299,6 +335,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieHarryPotter04"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -308,9 +345,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Goblet of Fire"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter05"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -320,9 +359,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Order of the Phoenix"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter06"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -332,9 +373,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Half-Blood Prince"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter0701"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -344,9 +387,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Deathly Hallows part 1"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHarryPotter0702"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -356,9 +401,11 @@
                     android:paddingRight="10dp"
                     android:text="Harry Potter and the Deathly Hallows part 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieHomeAlone"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -367,6 +414,7 @@
                     android:paddingRight="10dp"
                     android:text="Home Alone"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -380,6 +428,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieIncredibles"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -388,9 +437,11 @@
                     android:paddingRight="10dp"
                     android:text="The Incredibles"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieIndianaJonesRaiders"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -400,9 +451,11 @@
                     android:paddingRight="10dp"
                     android:text="Indiana Jones and the Raiders of the Lost Ark"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieIndianaJonesTemple"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -412,9 +465,11 @@
                     android:paddingRight="10dp"
                     android:text="Indiana Jones and the Temple of Doom"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieIndianaJonesLastCrusade"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -424,9 +479,11 @@
                     android:paddingRight="10dp"
                     android:text="Indiana Jones and the Last Crusade"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieIronMan"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -435,9 +492,11 @@
                     android:paddingRight="10dp"
                     android:text="Iron Man"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieIronMan2"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -446,6 +505,7 @@
                     android:paddingRight="10dp"
                     android:text="Iron Man 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -459,6 +519,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieItsAWonderfulLife"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -467,9 +528,11 @@
                     android:paddingRight="10dp"
                     android:text="It's a Wonderful Life"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieJurassicPark"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -478,9 +541,11 @@
                     android:paddingRight="10dp"
                     android:text="Jurassic Park"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieJurassicPark2"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -489,9 +554,11 @@
                     android:paddingRight="10dp"
                     android:text="Jurassic Park 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieJurassicPark3"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -500,9 +567,11 @@
                     android:paddingRight="10dp"
                     android:text="Jurassic Park 3"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieLionKing"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -511,9 +580,11 @@
                     android:paddingRight="10dp"
                     android:text="The Lion King"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieLotRFellowship"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -523,6 +594,7 @@
                     android:paddingRight="10dp"
                     android:text="The Lord of the Rings: The Fellowship of the Ring"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -536,6 +608,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieLotRTwoTowers"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -545,9 +618,11 @@
                     android:paddingRight="10dp"
                     android:text="The Lord of the Rings: The Two Towers"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieLotRReturnOfTheKing"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -557,9 +632,11 @@
                     android:paddingRight="10dp"
                     android:text="The Lord of the Rings: The Return of the King"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieMightyDucks"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -568,9 +645,11 @@
                     android:paddingRight="10dp"
                     android:text="The Mighty Ducks"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieMightyDucks2"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -579,9 +658,11 @@
                     android:paddingRight="10dp"
                     android:text="The Mighty Ducks 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieMightyDucks3"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -590,9 +671,11 @@
                     android:paddingRight="10dp"
                     android:text="The Mighty Ducks 3"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieMiracleOn34thStreet"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -601,6 +684,7 @@
                     android:paddingRight="10dp"
                     android:text="Miracle on 34th Street"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -614,6 +698,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieMonstersInc"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -622,9 +707,11 @@
                     android:paddingRight="10dp"
                     android:text="Monsters, Inc."
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/moviePirates"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -634,9 +721,11 @@
                     android:paddingRight="10dp"
                     android:text="Pirates of the Caribbean: Curse of the Black Pearl"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieRememberTheTitans"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -645,9 +734,11 @@
                     android:paddingRight="10dp"
                     android:text="Remeber the Titans"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieSantaClause"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -656,9 +747,11 @@
                     android:paddingRight="10dp"
                     android:text="The Santa Clause"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp01"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -668,9 +761,11 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: The Phantom Menace"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp02"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -680,6 +775,7 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: Attack of the Clones"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -693,6 +789,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp03"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -702,9 +799,11 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: Revenge of the Sith"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp04"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -713,9 +812,11 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: A New Hope"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp05"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -725,9 +826,11 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: The Empire Strikes Back"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieStarWarsEp06"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -737,9 +840,11 @@
                     android:paddingRight="10dp"
                     android:text="Star Wars: Return of the Jedi"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieToyStory"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -748,9 +853,11 @@
                     android:paddingRight="10dp"
                     android:text="Toy Story"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieToyStory2"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -759,6 +866,7 @@
                     android:paddingRight="10dp"
                     android:text="Toy Story 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>
@@ -772,6 +880,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/movieTransformers"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -780,9 +889,11 @@
                     android:paddingRight="10dp"
                     android:text="Transformers"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieWhiteChristmas"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -791,9 +902,11 @@
                     android:paddingRight="10dp"
                     android:text="White Christmas"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieXMen"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -802,9 +915,11 @@
                     android:paddingRight="10dp"
                     android:text="X-Men"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieXMen2"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -813,9 +928,11 @@
                     android:paddingRight="10dp"
                     android:text="X-Men 2"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieXMen3"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -824,9 +941,11 @@
                     android:paddingRight="10dp"
                     android:text="X-Men 3"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
                 <TextView
+                    android:id="@+id/movieXMenOrigins"
                     android:layout_width="0dp"
                     android:layout_height="235dp"
                     android:layout_weight="1"
@@ -835,6 +954,7 @@
                     android:paddingRight="10dp"
                     android:text="X-Men Origins: Wolverine"
                     android:drawableTop="@drawable/batman_begins"
+                    android:onClick="displayMovieInfo"
                     />
 
             </LinearLayout>

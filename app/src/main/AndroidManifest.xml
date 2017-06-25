@@ -21,6 +21,7 @@
         <activity android:name=".MusicActivity" />
         <activity android:name=".LightsActivity" />
         <activity android:name=".MoviesActivity" />
+        <activity android:name=".MovieInfoActivity" />
     </application>
 
 </manifest>
