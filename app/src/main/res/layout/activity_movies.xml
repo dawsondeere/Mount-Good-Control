@@ -54,16 +54,18 @@
         android:layout_below="@id/buttonSwitches"
         >
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/movieLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
-
+<!--
             <LinearLayout
                 android:id="@+id/moviesRowOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="0dp"
+                android:layout_marginBottom="10dp"
                 >
 
                 <TextView
@@ -75,7 +77,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="Aladdin"
-                    android:drawableTop="@drawable/batman_begins"
+                    android:drawableTop="@drawable/aladdin_140x200"
                     android:onClick="displayMovieInfo"
                     />
 
@@ -958,8 +960,8 @@
                     />
 
             </LinearLayout>
-
-        </RelativeLayout>
+-->
+        </LinearLayout>
 
     </ScrollView>
 
