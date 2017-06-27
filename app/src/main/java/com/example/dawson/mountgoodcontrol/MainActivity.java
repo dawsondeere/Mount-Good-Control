@@ -164,16 +164,9 @@ public class MainActivity extends AppCompatActivity {
 
             while (true) {
                 try {
+                    //java.util.Arrays.fill(mmBuffer, (byte) 0);
                     int numBytes = mmInStream.read(mmBuffer);
-                    char[] songName = new char[numBytes];
-                    char[] songArtist = new char[numBytes];
-                    char[] songVolume = new char[numBytes];
-                    parseData(numBytes, songName, songArtist, songVolume);
-
-                    String songN = new String(songName);
-                    String songA = new String(songArtist);
-                    String songV = new String(songVolume);
-                    updateStrings(songN, songA, songV);
+                    parseData(numBytes);
 
                     if (MusicActivity.mn != null) { MusicActivity.runUpdate(); }
                 }
@@ -184,38 +177,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        private void parseData(int numBytes, char[] songName, char[] songArtist, char[] songVolume) {
-            int index = 0;
-            boolean onName = false;
-            boolean onArtist = false;
-            boolean onVolume = false;
+        private void parseData(int numBytes) {
+            String buffer = new String(mmBuffer, 0,  numBytes);
+            int pos1 = buffer.indexOf("!");
+            int pos2 = buffer.indexOf("@");
+            int pos3 = buffer.indexOf("#");
+            String songName = buffer.substring(pos1+1, pos2);
+            String songArtist = buffer.substring(pos2+1, pos3);
+            String songVolume = buffer.substring(pos3+1);
 
-            for (int i = 0; i < numBytes; i++) {
-                if ((char) mmBuffer[i] == '!') {
-                    onName = true;
-                    onArtist = false;
-                    onVolume = false;
-                    index = 0;
-                } else if ((char) mmBuffer[i] == '@') {
-                    onName = false;
-                    onArtist = true;
-                    onVolume = false;
-                    index = 0;
-                } else if ((char) mmBuffer[i] == '#') {
-                    onName = false;
-                    onArtist = false;
-                    onVolume = true;
-                    index = 0;
-                } else {
-                    if (onName) { songName[index] = (char) mmBuffer[i]; }
-                    else if (onArtist) { songArtist[index] = (char) mmBuffer[i]; }
-                    else if (onVolume) { songVolume[index] = (char) mmBuffer[i]; }
-                    index++;
-                }
-            }
-        }
-
-        private void updateStrings(String songName, String songArtist, String songVolume) {
             if (songName.contains("media player")) { songName = "No song"; }
             else if (songName.equals("1 ")) { songName = "No song"; }
             newSongName = songName;
