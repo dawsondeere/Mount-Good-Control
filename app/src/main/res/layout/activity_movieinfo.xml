@@ -12,7 +12,7 @@
         android:layout_weight="1"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:src="@drawable/batman_begins_336x480"
+        android:src="@drawable/medium_no_image"
         />
 
     <LinearLayout
@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:orientation="vertical"
-        android:layout_marginRight="50dp"
+        android:layout_marginEnd="50dp"
         >
 
         <TextView
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="5"
-            android:gravity="left"
+            android:gravity="start"
             android:text="Description"
             />
 
