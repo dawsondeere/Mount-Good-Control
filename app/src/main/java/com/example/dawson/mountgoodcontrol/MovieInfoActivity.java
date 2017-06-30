@@ -30,7 +30,7 @@ public class MovieInfoActivity extends AppCompatActivity {
     private String getDescription(String title) {
         String description = "Description for " + title;
 
-        InputStream inputStream = this.getResources().openRawResource(R.raw.description);
+        InputStream inputStream = this.getResources().openRawResource(R.raw.descriptions);
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
