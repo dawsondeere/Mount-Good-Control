@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="@string/switchLights"
             android:onClick="startLights"
-            />
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/switchMusic"
-            />
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text="@string/switchMovies"
             android:onClick="startMovies"
-            />
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 
@@ -93,7 +93,8 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonPrevSong"/>
+            android:text="@string/buttonPrevSong"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -103,7 +104,8 @@
             android:layout_weight="3"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonPlayMusic"/>
+            android:text="@string/buttonPlayMusic"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -113,7 +115,8 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonNextSong"/>
+            android:text="@string/buttonNextSong"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
     <LinearLayout
@@ -131,7 +134,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonVolDown"/>
+            android:text="@string/buttonVolDown"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -141,7 +145,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonVolUp"/>
+            android:text="@string/buttonVolUp"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
     <LinearLayout
@@ -160,7 +165,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonStartMusic"/>
+            android:text="@string/buttonStartMusic"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:textColor="@color/colorPrimary"
@@ -170,7 +176,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="sendData"
-            android:text="@string/buttonStopMusic"/>
+            android:text="@string/buttonStopMusic"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </RelativeLayout>
