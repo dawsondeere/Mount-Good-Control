@@ -31,7 +31,7 @@ public class MoviesActivity extends AppCompatActivity {
 
         try {
             boolean isDone = false;
-            boolean isEmpty = true;
+            boolean isEmpty;
             while (true) {
                 LinearLayout linLay = new LinearLayout(this);
                 linLay.setOrientation(LinearLayout.HORIZONTAL);
@@ -49,7 +49,7 @@ public class MoviesActivity extends AppCompatActivity {
                     temp.setId(View.generateViewId());
                     temp.setText(title);
 
-                    int height = 0;
+                    int height;
                     if (title.length() > 27) {
                         height = LinearLayout.LayoutParams.WRAP_CONTENT;
                         temp.setLines(3);
@@ -168,7 +168,7 @@ public class MoviesActivity extends AppCompatActivity {
         else { return R.drawable.small_no_image; }
     }
 
-    public void displayMovieInfo(View v) {
+    private void displayMovieInfo(View v) {
         TextView textTitle = (TextView) findViewById(v.getId());
         String title = textTitle.getText().toString();
         Intent passIntent = new Intent(this, MovieInfoActivity.class);
