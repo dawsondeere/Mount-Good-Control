@@ -171,8 +171,7 @@ public class MoviesActivity extends AppCompatActivity {
     }
 
     private void displayMovieInfo(View v) {
-        TextView textTitle = (TextView) findViewById(v.getId());
-        String title = textTitle.getText().toString();
+        String title = ((TextView) findViewById(v.getId())).getText().toString();
         Intent passIntent = new Intent(this, MovieInfoActivity.class);
         passIntent.putExtra("title", title);
         startActivity(passIntent);
