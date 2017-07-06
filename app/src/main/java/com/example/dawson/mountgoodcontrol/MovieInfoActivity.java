@@ -133,20 +133,24 @@ public class MovieInfoActivity extends AppCompatActivity {
         }
     }
 
+    private String formatTitle(String title) {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < title.length(); i++) {
+            char c = title.charAt(i);
+            switch (c) {
+                case ' ': str.append("-"); break;
+                case '\'': break;
+                case ':': break;
+                default: str.append(Character.toLowerCase(c));
+            }
+        }
+
+        return str.toString();
+    }
+
     public void playMovie(View v) {
         TextView textTitle = (TextView) findViewById(R.id.movieInfoTitle);
         String title = (String) textTitle.getText();
-        byte[] data = new byte[title.length()+3];
-
-        data[0] = (byte) 57;
-        data[1] = (byte) 57;
-
-        for (int i = 0; i < title.length(); i++) {
-            data[i+2] = (byte) title.charAt(i);
-        }
-
-        data[data.length - 1] = (byte) '\n';
-
-        MainActivity.ConnectedThread.write(data);
+        MainActivity.writeData("movies/" + formatTitle(title));
     }
 }

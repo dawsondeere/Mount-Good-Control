@@ -6,34 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
 public class MusicActivity extends AppCompatActivity {
     private static TextView songN;
     private static TextView songA;
     private static TextView songV;
     public static MusicActivity mn;
-
-    private static void updateText() {
-        songN.setText(MainActivity.newSongName);
-        songA.setText(MainActivity.newSongArtist);
-        songV.setText(MainActivity.newSongVolume);
-    }
-
-    public static void runUpdate() {
-        new Thread() {
-            public void run() {
-                try {
-                    mn.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() { updateText(); }
-                    });
-                    Thread.sleep(300);
-                }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
-    }
+    private static UpdateThread upThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,23 +26,100 @@ public class MusicActivity extends AppCompatActivity {
         songN = (TextView) findViewById(R.id.songName);
         songA = (TextView) findViewById(R.id.songArtist);
         songV = (TextView) findViewById(R.id.songVolume);
-        updateText();
     }
 
-    private void writeData(int digit1, int digit2) {
-        byte[] data = {(byte) digit1, (byte) digit2};
-        MainActivity.ConnectedThread.write(data);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        upThread = new UpdateThread();
+        upThread.start();
+    }
+
+    @Override
+    protected void onStop() {
+        upThread.cancel();
+        super.onStop();
+    }
+
+    private class UpdateThread extends Thread {
+        private boolean cont;
+
+        private UpdateThread() {
+            cont = true;
+        }
+        private void cancel() {
+            cont = false;
+        }
+
+        public void run() {
+            while (cont) {
+                try {
+                    mn.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            getData("music/data");
+                        }
+                    });
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e) {
+                    System.out.println("Thread interrupted");
+                }
+            }
+        }
+    }
+
+    public static void getData(String url) {
+        String finalurl = MainActivity.BASEURL + url;
+        System.out.println(finalurl);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        parseData(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("That didn't work!");
+                    }
+                }
+        );
+
+        MainActivity.queue.add(stringRequest);
+    }
+
+    private static void parseData(String buffer) {
+        int pos1 = buffer.indexOf("!");
+        int pos2 = buffer.indexOf("@");
+        int pos3 = buffer.indexOf("#");
+        String songName = buffer.substring(pos1+1, pos2);
+        String songArtist = buffer.substring(pos2+1, pos3);
+        String songVolume = "Volume: " + buffer.substring(pos3+1);
+
+        if (songName.contains("media player")) { songName = "No song"; }
+        else if (songName.equals("1 ")) { songName = "No song"; }
+
+        if (songArtist.contains("media player")) { songArtist = "is playing"; }
+        else if (songArtist.contains("playlist")) { songArtist = "is playing"; }
+
+        if (!songArtist.contains("is playing")) { songArtist = "by " + songArtist; }
+
+        songN.setText(songName);
+        songA.setText(songArtist);
+        songV.setText(songVolume);
     }
 
     public void sendData(View v) {
         switch (v.getId()) {
-            case R.id.buttonPlayPause: writeData(50,55); break;
-            case R.id.buttonPrevSong: writeData(50,56); break;
-            case R.id.buttonNextSong: writeData(50,57); break;
-            case R.id.buttonVolDown: writeData(51,48); break;
-            case R.id.buttonVolUp: writeData(51,49); break;
-            case R.id.buttonStartMusic: if (MainActivity.newSongName.contains("No song")) { writeData(51,50); } break;
-            case R.id.buttonStopMusic: writeData(51,51); break;
+            case R.id.buttonPlayPause: MainActivity.writeData("music/play"); break;
+            case R.id.buttonPrevSong: MainActivity.writeData("music/prev"); break;
+            case R.id.buttonNextSong: MainActivity.writeData("music/next"); break;
+            case R.id.buttonVolDown: MainActivity.writeData("music/volDown"); break;
+            case R.id.buttonVolUp: MainActivity.writeData("music/volUp"); break;
+            case R.id.buttonStartMusic: if (songN.getText().toString().contains("No song")) { MainActivity.writeData("music/start"); } break;
+            case R.id.buttonStopMusic: MainActivity.writeData("music/stop"); break;
         }
     }
 
