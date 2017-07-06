@@ -28,7 +28,7 @@
             android:id="@+id/movieInfoTitle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="4"
             android:gravity="center_horizontal"
             android:textSize="16pt"
             android:layout_marginTop="90dp"
@@ -39,15 +39,16 @@
             android:id="@+id/movieInfoDescription"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"
+            android:layout_weight="14"
             android:gravity="start"
+            android:textSize="12pt"
             android:text="Description"
             />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:layout_marginBottom="75dp"
             android:text="Play Movie"
             android:textSize="16pt"
