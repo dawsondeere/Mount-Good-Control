@@ -1,7 +1,5 @@
 package com.example.dawson.mountgoodcontrol;
 
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,8 +17,7 @@ public class MovieInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movieinfo);
-        Intent intent = getIntent();
-        String title = intent.getExtras().getString("title");
+        String title = getIntent().getExtras().getString("title");
 
         ((TextView) findViewById(R.id.movieInfoTitle)).setText(title);
         ((TextView) findViewById(R.id.movieInfoDescription)).setText(getDescription(title));
@@ -149,8 +146,7 @@ public class MovieInfoActivity extends AppCompatActivity {
     }
 
     public void playMovie(View v) {
-        TextView textTitle = (TextView) findViewById(R.id.movieInfoTitle);
-        String title = (String) textTitle.getText();
+        String title = ((TextView) findViewById(R.id.movieInfoTitle)).getText().toString();
         MainActivity.writeData("movies/" + formatTitle(title));
     }
 }
