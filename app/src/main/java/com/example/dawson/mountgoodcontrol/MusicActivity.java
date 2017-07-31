@@ -15,13 +15,13 @@ public class MusicActivity extends AppCompatActivity {
     private static TextView songN;
     private static TextView songA;
     private static TextView songV;
-    public static MusicActivity mn;
+    public static MusicActivity ma;
     private static UpdateThread upThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mn = MusicActivity.this;
+        ma = MusicActivity.this;
         setContentView(R.layout.activity_music);
         songN = (TextView) findViewById(R.id.songName);
         songA = (TextView) findViewById(R.id.songArtist);
@@ -54,7 +54,7 @@ public class MusicActivity extends AppCompatActivity {
         public void run() {
             while (cont) {
                 try {
-                    mn.runOnUiThread(new Runnable() {
+                    ma.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             getData("music/data");
@@ -71,7 +71,7 @@ public class MusicActivity extends AppCompatActivity {
 
     public static void getData(String url) {
         String finalurl = MainActivity.BASEURL + url;
-        System.out.println(finalurl);
+        //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
                 new Response.Listener<String>() {
                     @Override
