@@ -38,7 +38,8 @@
             tools:ignore="ButtonStyle" />
 
         <Button
-            android:textColor="@color/colorPrimary"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
             android:id="@+id/buttonSwitchMovies"
             android:layout_weight="1"
             android:layout_width="0dp"
