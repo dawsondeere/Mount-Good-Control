@@ -20,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
     public static final String BASEURL = "http://50.24.190.215:5000/";
+    public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     //private static PebbleThread pebbleThread;
     //private static final UUID pebUUID = UUID.fromString("1786e94e-ad90-496f-819a-0c9db99c174b");
 

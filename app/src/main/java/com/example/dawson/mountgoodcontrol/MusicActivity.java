@@ -3,6 +3,8 @@ package com.example.dawson.mountgoodcontrol;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,12 +13,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
-public class MusicActivity extends AppCompatActivity {
+public class MusicActivity extends AppCompatActivity implements View.OnTouchListener {
     private static TextView songN;
     private static TextView songA;
     private static TextView songV;
     public static MusicActivity ma;
     private static UpdateThread upThread;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,17 @@ public class MusicActivity extends AppCompatActivity {
         songN = (TextView) findViewById(R.id.songName);
         songA = (TextView) findViewById(R.id.songArtist);
         songV = (TextView) findViewById(R.id.songVolume);
+
+        gestureDetector = new GestureDetector(this,new OnSwipeListener(){
+            @Override
+            public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
+                if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
+                if (direction == Direction.right) { startLights(null); }
+                else if (direction == Direction.left) { startMovies(null); }
+                return true;
+            }
+        });
+        findViewById(R.id.activity_music).setOnTouchListener(this);
     }
 
     @Override
@@ -39,6 +53,12 @@ public class MusicActivity extends AppCompatActivity {
     protected void onStop() {
         upThread.cancel();
         super.onStop();
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return true;
     }
 
     private class UpdateThread extends Thread {

@@ -3,7 +3,9 @@ package com.example.dawson.mountgoodcontrol;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,13 +15,30 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MoviesActivity extends AppCompatActivity {
+public class MoviesActivity extends AppCompatActivity implements View.OnTouchListener {
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
         populateScrollView();
+
+        gestureDetector = new GestureDetector(this,new OnSwipeListener(){
+            @Override
+            public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
+                if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
+                if (direction == Direction.right) { startMusic(null); }
+                return true;
+            }
+        });
+        findViewById(R.id.activity_movies).setOnTouchListener(this);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return true;
     }
 
     private void populateScrollView() {

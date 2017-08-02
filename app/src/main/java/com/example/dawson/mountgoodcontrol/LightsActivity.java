@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,7 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
-public class LightsActivity extends AppCompatActivity {
+public class LightsActivity extends AppCompatActivity implements View.OnTouchListener {
     private static UpdateThread upThread;
     public static LightsActivity la;
     private static Button buttonLiving;
@@ -22,6 +24,7 @@ public class LightsActivity extends AppCompatActivity {
     private static Button buttonStorm;
     private static Button buttonAggies;
     private static Drawable buttonBackground;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,16 @@ public class LightsActivity extends AppCompatActivity {
         buttonStorm = (Button) findViewById(R.id.buttonStorm);
         buttonAggies = (Button) findViewById(R.id.buttonAggies);
         buttonBackground = buttonLiving.getBackground();
+
+        gestureDetector = new GestureDetector(this,new OnSwipeListener(){
+            @Override
+            public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
+                if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
+                if (direction == Direction.left) { startMusic(null); }
+                return true;
+            }
+        });
+        findViewById(R.id.activity_lights).setOnTouchListener(this);
     }
 
     @Override
@@ -46,6 +59,12 @@ public class LightsActivity extends AppCompatActivity {
     protected void onStop() {
         upThread.cancel();
         super.onStop();
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return true;
     }
 
     private class UpdateThread extends Thread {
