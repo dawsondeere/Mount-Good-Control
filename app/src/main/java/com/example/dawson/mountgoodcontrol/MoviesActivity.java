@@ -3,10 +3,12 @@ package com.example.dawson.mountgoodcontrol;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,14 +16,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 public class MoviesActivity extends AppCompatActivity implements View.OnTouchListener {
     private GestureDetector gestureDetector;
+    private int numMovies;
+    private HashMap<Integer, String> titleIds = new HashMap<Integer, String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        numMovies = displayMetrics.widthPixels/displayMetrics.densityDpi;
         populateScrollView();
 
         gestureDetector = new GestureDetector(this,new OnSwipeListener(){
@@ -45,61 +53,74 @@ public class MoviesActivity extends AppCompatActivity implements View.OnTouchLis
         InputStream inputStream = this.getResources().openRawResource(R.raw.titles);
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
         LinearLayout layout = (LinearLayout) findViewById(R.id.movieLayout);
 
         try {
             boolean isDone = false;
             boolean isEmpty;
             while (true) {
-                LinearLayout linLay = new LinearLayout(this);
-                linLay.setOrientation(LinearLayout.HORIZONTAL);
+                LinearLayout linLayImage = new LinearLayout(this);
+                LinearLayout linLayText = new LinearLayout(this);
+                linLayImage.setOrientation(LinearLayout.HORIZONTAL);
+                linLayText.setOrientation(LinearLayout.HORIZONTAL);
                 LinearLayout.LayoutParams linLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 int marginBottom = (int) getResources().getDimension(R.dimen.linear_margin_bottom);
                 linLayoutParams.setMargins(0,0,0,marginBottom);
-                linLay.setLayoutParams(linLayoutParams);
+                linLayImage.setLayoutParams(linLayoutParams);
+                linLayText.setLayoutParams(linLayoutParams);
 
                 isEmpty = true;
-                for(int i = 0; i < 6; i++) {
+                for(int i = 0; i < numMovies; i++) {
                     String title = bufferedReader.readLine();
                     if (title == null) { isDone = true; break; }
                     isEmpty = false;
-                    TextView temp = new TextView(this);
-                    temp.setId(View.generateViewId());
-                    temp.setText(title);
+                    ImageView tempImage = new ImageView(this);
+                    TextView tempText = new TextView(this);
+                    tempImage.setId(View.generateViewId());
+                    tempText.setId(View.generateViewId());
+                    tempText.setText(title);
+                    titleIds.put(tempImage.getId(), title);
+                    titleIds.put(tempText.getId(), title);
 
-                    int height;
-                    if (title.length() > 27) {
-                        height = LinearLayout.LayoutParams.WRAP_CONTENT;
-                        temp.setLines(3);
-                    }
-                    else {
-                        height = (int) getResources().getDimension(R.dimen.movie_height);
-                    }
-                    temp.setLayoutParams(new LinearLayout.LayoutParams(0, height, 1f));
-                    temp.setGravity(Gravity.CENTER);
-                    temp.setPadding(10, 0, 10, 0);
-                    temp.setCompoundDrawablesWithIntrinsicBounds(0, getImage(title), 0, 0);
+                    int imageHeight = (int) getResources().getDimension(R.dimen.movie_image_height);
+                    tempText.setLines(3);
+                    tempText.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f));
+                    tempImage.setLayoutParams(new LinearLayout.LayoutParams(0, imageHeight, 1f));
+                    tempText.setGravity(Gravity.CENTER_HORIZONTAL);
+                    tempText.setPadding(10, 0, 10, 0);
+                    tempImage.setPadding(10, 0, 10, 0);
+                    tempImage.setImageResource(getImage(title));
 
-                    temp.setOnClickListener(new View.OnClickListener() {
+                    tempText.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            displayMovieInfo(v);
+                        }
+                    });
+                    tempImage.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             displayMovieInfo(v);
                         }
                     });
 
-                    linLay.addView(temp);
+                    linLayImage.addView(tempImage);
+                    linLayText.addView(tempText);
                 }
 
                 if (isEmpty) { break; }
                 else {
-                    if (linLay.getChildCount() < 6) {
-                        View filler = new View(this);
-                        float gravity = 6 - linLay.getChildCount();
-                        filler.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, gravity));
-                        linLay.addView(filler);
+                    if (linLayImage.getChildCount() < numMovies) {
+                        View fillerImage = new View(this);
+                        View fillerText = new View(this);
+                        float gravity = numMovies - linLayImage.getChildCount();
+                        fillerImage.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, gravity));
+                        fillerText.setLayoutParams(new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.MATCH_PARENT, gravity));
+                        linLayImage.addView(fillerImage);
+                        linLayText.addView(fillerText);
                     }
-                    layout.addView(linLay);
+                    layout.addView(linLayImage);
+                    layout.addView(linLayText);
                     if (isDone) { break; }
                 }
             }
@@ -190,7 +211,7 @@ public class MoviesActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     private void displayMovieInfo(View v) {
-        String title = ((TextView) findViewById(v.getId())).getText().toString();
+        String title = titleIds.get(v.getId());
         Intent passIntent = new Intent(this, MovieInfoActivity.class);
         passIntent.putExtra("title", title);
         startActivity(passIntent);
