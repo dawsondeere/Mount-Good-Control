@@ -20,12 +20,34 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
     public static final String BASEURL = "http://50.24.190.215:5000/";
+    public static final String BASEURLMOVIE = "http://50.24.190.215:5050/";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     //private static PebbleThread pebbleThread;
     //private static final UUID pebUUID = UUID.fromString("1786e94e-ad90-496f-819a-0c9db99c174b");
 
     public static void writeData(String url) {
         String finalurl = BASEURL + url;
+        //System.out.println(finalurl);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        //System.out.println("Response is: "+ response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("That didn't work!");
+                    }
+                }
+        );
+
+        queue.add(stringRequest);
+    }
+
+    public static void writeMovieData(String url) {
+        String finalurl = BASEURLMOVIE + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
                 new Response.Listener<String>() {

@@ -147,6 +147,6 @@ public class MovieInfoActivity extends AppCompatActivity {
 
     public void playMovie(View v) {
         String title = ((TextView) findViewById(R.id.movieInfoTitle)).getText().toString();
-        MainActivity.writeData("movies/" + formatTitle(title));
+        MainActivity.writeMovieData("movie/" + formatTitle(title));
     }
 }
