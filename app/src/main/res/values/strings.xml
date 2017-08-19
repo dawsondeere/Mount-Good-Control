@@ -21,6 +21,7 @@
     <!--
     <string name="buttonPlayMovie">Play/Pause Movie</string>
     -->
+    <string name="buttonRemote">Remote</string>
     <string name="switchLights">Lights</string>
     <string name="switchMusic">Music</string>
     <string name="switchMovies">Movies</string>
