@@ -138,6 +138,8 @@ public class MovieInfoActivity extends AppCompatActivity {
                 case ' ': str.append("-"); break;
                 case '\'': break;
                 case ':': break;
+                case ',': break;
+                case '.': break;
                 default: str.append(Character.toLowerCase(c));
             }
         }
