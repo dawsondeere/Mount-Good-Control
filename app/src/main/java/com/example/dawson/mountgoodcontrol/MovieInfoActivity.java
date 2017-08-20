@@ -82,6 +82,9 @@ public class MovieInfoActivity extends AppCompatActivity {
             case "Harry Potter and the Half-Blood Prince": return R.drawable.medium_harry_potter_06;
             case "Harry Potter and the Deathly Hallows part 1": return R.drawable.medium_harry_potter_0701;
             case "Harry Potter and the Deathly Hallows part 2": return R.drawable.medium_harry_potter_0702;
+            case "The Hobbit: An Unexpected Journey": return R.drawable.medium_the_hobbit_01;
+            case "The Hobbit: The Desolation of Smaug": return R.drawable.medium_the_hobbit_02;
+            case "The Hobbit: The Battle of the Five Armies": return R.drawable.medium_the_hobbit_03;
             case "Home Alone": return R.drawable.medium_home_alone;
             case "The Hunger Games": return R.drawable.medium_the_hunger_games_01;
             case "The Hunger Games: Catching Fire": return R.drawable.medium_the_hunger_games_02;
@@ -109,12 +112,16 @@ public class MovieInfoActivity extends AppCompatActivity {
             case "Pirates of the Caribbean: Curse of the Black Pearl": return R.drawable.medium_pirates_of_the_caribbean_curse_of_the_black_pearl;
             case "Remember the Titans": return R.drawable.medium_remember_the_titans;
             case "The Santa Clause": return R.drawable.medium_the_santa_clause;
+            case "Star Trek": return R.drawable.medium_star_trek;
+            case "Star Trek: Into Darkness": return R.drawable.medium_star_trek_into_darkness;
             case "Star Wars: The Phantom Menace": return R.drawable.medium_star_wars_01;
             case "Star Wars: Attack of the Clones": return R.drawable.medium_star_wars_02;
             case "Star Wars: Revenge of the Sith": return R.drawable.medium_star_wars_03;
             case "Star Wars: A New Hope": return R.drawable.medium_star_wars_04;
             case "Star Wars: The Empire Strikes Back": return R.drawable.medium_star_wars_05;
             case "Star Wars: Return of the Jedi": return R.drawable.medium_star_wars_06;
+            case "Star Wars: The Force Awakens": return R.drawable.medium_star_wars_07;
+            case "Rogue One": return R.drawable.medium_rogue_one;
             case "Toy Story": return R.drawable.medium_toy_story;
             case "Toy Story 2": return R.drawable.medium_toy_story_2;
             case "Transformers": return R.drawable.medium_transformers;
