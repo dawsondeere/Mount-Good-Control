@@ -15,118 +15,118 @@
         android:id="@+id/textRemote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
         android:gravity="center"
-        android:text="Remote"
-        android:textSize="20pt"
         android:textColor="@color/colorPrimary"
-        android:paddingBottom="60dp"
+        android:textSize="20pt"
+        android:text="Remote"
         />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@+id/buttonRemoteOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textRemote"
+        android:orientation="horizontal"
         >
 
         <Button
             android:id="@+id/buttonPrevChapter"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Prev chapter"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="Prev chapter"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonMoviePlayPause"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Play/Pause"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="Play/Pause"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonNextChapter"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Next chapter"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="Next chapter"
             android:onClick="sendData"
             />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@+id/buttonRemoteTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonRemoteOne"
+        android:orientation="horizontal"
         >
 
         <Button
             android:id="@+id/buttonMedBack"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="60 seconds back"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="60 seconds back"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonShortBack"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="10 seconds back"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="10 seconds back"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonVeryShortBack"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="3 seconds back"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="3 seconds back"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonVeryShortForward"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="3 seconds forward"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="3 seconds forward"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonShortForward"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="10 seconds forward"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="10 seconds forward"
             android:onClick="sendData"
             />
 
         <Button
             android:id="@+id/buttonMedForward"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="60 seconds forward"
+            android:layout_weight="1"
             android:textColor="@color/colorPrimary"
+            android:text="60 seconds forward"
             android:onClick="sendData"
             />
 
@@ -138,8 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonRemoteTwo"
         android:layout_marginTop="40dp"
-        android:text="Stop"
         android:textColor="@color/colorPrimary"
+        android:text="Stop"
         android:onClick="sendData"
         />
 

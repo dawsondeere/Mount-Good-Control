@@ -18,47 +18,51 @@
         >
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonSwitchLights"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/switchLights"
             android:onClick="startLights"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonSwitchMusic"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/switchMusic"
             android:onClick="startMusic"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:background="@drawable/button"
-            android:textColor="@color/white"
             android:id="@+id/buttonSwitchMovies"
             android:layout_weight="1"
-            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
             android:text="@string/switchMovies"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
     </LinearLayout>
 
     <Button
-        android:textColor="@color/colorPrimary"
         android:id="@+id/buttonMovieRemote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonSwitches"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/colorPrimary"
         android:text="@string/buttonRemote"
         android:onClick="startRemote"
-        tools:ignore="ButtonStyle" />
+        tools:ignore="ButtonStyle"
+        />
 
     <ScrollView
         android:layout_width="match_parent"

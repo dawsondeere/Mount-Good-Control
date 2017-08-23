@@ -21,46 +21,49 @@
         >
 
         <Button
+            android:id="@+id/buttonSwitchLights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@drawable/button"
             android:textColor="@color/white"
-            android:id="@+id/buttonSwitchLights"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:text="@string/switchLights"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonSwitchMusic"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/switchMusic"
             android:onClick="startMusic"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonSwitchMovies"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/switchMovies"
             android:onClick="startMovies"
-            tools:ignore="ButtonStyle" />
+            tools:ignore="ButtonStyle"
+            />
 
     </LinearLayout>
 
     <Button
-        android:textColor="@color/colorPrimary"
         android:id="@+id/buttonMainLight"
-        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonSwitches"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/buttonMainLight"
         android:onClick="sendData"
-        android:text="@string/buttonMainLight"/>
+        />
 
     <LinearLayout
         android:id="@+id/moreLights"
@@ -71,37 +74,37 @@
         >
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonLamp"
-            android:padding="15dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:onClick="sendData"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/buttonLamp"
-            tools:ignore="ButtonStyle" />
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonStorm"
-            android:padding="15dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:onClick="sendData"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/buttonStorm"
-            tools:ignore="ButtonStyle" />
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
 
         <Button
-            android:textColor="@color/colorPrimary"
             android:id="@+id/buttonAggies"
-            android:padding="15dp"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:onClick="sendData"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
             android:text="@string/buttonAggies"
-            tools:ignore="ButtonStyle" />
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
     </LinearLayout>
 
     <TextView
