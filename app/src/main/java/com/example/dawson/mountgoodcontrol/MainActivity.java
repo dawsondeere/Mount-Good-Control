@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String BASEURL = "http://50.24.190.215:5000/";
     public static final String BASEURLMOVIE = "http://50.24.190.215:5050/";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
-    private static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+    public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
     //private static PebbleThread pebbleThread;
     //private static final UUID pebUUID = UUID.fromString("1786e94e-ad90-496f-819a-0c9db99c174b");
 

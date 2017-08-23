@@ -107,6 +107,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
                 }
         );
 
+        stringRequest.setRetryPolicy(MainActivity.retryPolicy);
         MainActivity.queue.add(stringRequest);
     }
 
