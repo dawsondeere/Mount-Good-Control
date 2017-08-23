@@ -103,93 +103,17 @@
             android:text="@string/buttonAggies"
             tools:ignore="ButtonStyle" />
     </LinearLayout>
-<!--
-    <Button
-        android:textColor="@color/colorPrimary"
-        android:id="@+id/buttonFanLight"
-        android:padding="15dp"
+
+    <TextView
+        android:id="@+id/textWhosHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/moreLights"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="sendData"
-        android:text="@string/buttonFanLight"/>
+        android:gravity="center_horizontal"
+        android:lines="4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16pt"
+        android:text="Nobody is home"
+        />
 
-    <LinearLayout
-        android:id="@+id/fanButtons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonFanLight"
-        android:layout_marginBottom="@dimen/bottom_padding_group"
-        >
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonFan0"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonFan0"/>
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonFan1"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonFan1"/>
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonFan2"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonFan2"/>
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonFan3"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonFan3"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/clapDetection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/fanButtons"
-        >
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonStartClap"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonStartClap"/>
-
-        <Button
-            android:textColor="@color/colorPrimary"
-            android:id="@+id/buttonStopClap"
-            android:padding="15dp"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="sendData"
-            android:text="@string/buttonStopClap"/>
-    </LinearLayout>
--->
 </RelativeLayout>

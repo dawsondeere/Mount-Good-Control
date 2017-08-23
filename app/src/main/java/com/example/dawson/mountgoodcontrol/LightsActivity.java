@@ -10,6 +10,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -23,6 +24,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     private static Button buttonLamp;
     private static Button buttonStorm;
     private static Button buttonAggies;
+    private static TextView textWhosHome;
     private static Drawable buttonBackground;
     private GestureDetector gestureDetector;
 
@@ -35,6 +37,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
         buttonLamp = (Button) findViewById(R.id.buttonLamp);
         buttonStorm = (Button) findViewById(R.id.buttonStorm);
         buttonAggies = (Button) findViewById(R.id.buttonAggies);
+        textWhosHome = (TextView) findViewById(R.id.textWhosHome);
         buttonBackground = buttonLiving.getBackground();
 
         gestureDetector = new GestureDetector(this,new OnSwipeListener(){
@@ -83,10 +86,11 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                     la.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            getData("lights/status");
+                            getLightData("lights/status");
+                            getWhosHomeData("whos-home");
                         }
                     });
-                    Thread.sleep(1500);
+                    Thread.sleep(1000*5);
                 }
                 catch (InterruptedException e) {
                     System.out.println("Thread interrupted");
@@ -95,14 +99,14 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
         }
     }
 
-    public void getData(String url) {
+    public void getLightData(String url) {
         String finalurl = MainActivity.BASEURL + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        parseData(response);
+                        parseLightData(response);
                     }
                 },
                 new Response.ErrorListener() {
@@ -113,10 +117,33 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                 }
         );
 
+        stringRequest.setRetryPolicy(MainActivity.retryPolicy);
         MainActivity.queue.add(stringRequest);
     }
 
-    private void parseData(String buffer) {
+    public void getWhosHomeData(String url) {
+        String finalurl = MainActivity.BASEURL + url;
+        //System.out.println(finalurl);
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        parseWhosHomeData(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("That didn't work!");
+                    }
+                }
+        );
+
+        stringRequest.setRetryPolicy(MainActivity.retryPolicy);
+        MainActivity.queue.add(stringRequest);
+    }
+
+    private void parseLightData(String buffer) {
         int swStart = -1;
         int swEnd = -1;
         int stStart = -1;
@@ -147,6 +174,11 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
             button.setBackground(buttonBackground);
             button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
         }
+    }
+
+    private void parseWhosHomeData(String buffer) {
+        if (buffer.equals("")) { textWhosHome.setText("Nobody is home");}
+        else { textWhosHome.setText(buffer); }
     }
 
     public void sendData(View v) {
