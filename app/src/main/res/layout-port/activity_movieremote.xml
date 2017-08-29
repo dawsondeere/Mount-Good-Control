@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_movieremote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dawson.mountgoodcontrol.MovieRemoteActivity"
+    >
+
+    <TextView
+        android:id="@+id/textRemote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20pt"
+        android:text="Remote"
+        />
+
+    <LinearLayout
+        android:id="@+id/buttonRemoteOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRemote"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonPrevChapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="Prev chapter"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonMoviePlayPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="Play/Pause"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonNextChapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="Next chapter"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonSixtySkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRemoteOne"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonMedBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="60 seconds back"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonMedForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="60 seconds forward"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTenSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSixtySkip"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonShortBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="10 seconds back"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonShortForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="10 seconds forward"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonThreeSkip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonTenSkip"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonVeryShortBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="3 seconds back"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonVeryShortForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:lines="2"
+            android:textColor="@color/colorPrimary"
+            android:text="3 seconds forward"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonToggleSubtitles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonThreeSkip"
+        android:textColor="@color/colorPrimary"
+        android:text="Toggle Subtitles"
+        android:onClick="sendData"
+        />
+
+    <Button
+        android:id="@+id/buttonMovieStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonToggleSubtitles"
+        android:textColor="@color/colorPrimary"
+        android:text="Stop"
+        android:onClick="sendData"
+        />
+
+</RelativeLayout>
