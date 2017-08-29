@@ -133,11 +133,21 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonMovieStop"
+        android:id="@+id/buttonToggleSubtitles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonRemoteTwo"
         android:layout_marginTop="40dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Toggle Subtitles"
+        android:onClick="sendData"
+        />
+
+    <Button
+        android:id="@+id/buttonMovieStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonToggleSubtitles"
         android:textColor="@color/colorPrimary"
         android:text="Stop"
         android:onClick="sendData"

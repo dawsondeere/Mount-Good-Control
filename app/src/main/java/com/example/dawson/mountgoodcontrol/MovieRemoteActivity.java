@@ -22,6 +22,7 @@ public class MovieRemoteActivity extends AppCompatActivity {
             case R.id.buttonShortForward: MainActivity.writeMovieData("remote/shortForward"); break;
             case R.id.buttonVeryShortBack: MainActivity.writeMovieData("remote/veryShortBack"); break;
             case R.id.buttonVeryShortForward: MainActivity.writeMovieData("remote/veryShortForward"); break;
+            case R.id.buttonToggleSubtitles: MainActivity.writeMovieData("remote/toggleSubtitle"); break;
             case R.id.buttonMovieStop: MainActivity.writeMovieData("remote/stop"); break;
         }
     }
