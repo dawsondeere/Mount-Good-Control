@@ -20,8 +20,9 @@ import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
-    public static final String BASEURL = "http://50.24.190.215:5000/";
-    public static final String BASEURLMOVIE = "http://50.24.190.215:5050/";
+    public static final String IP = "47.218.222.250";
+    public static final String BASEURL = "http://" + IP + ":5000/";
+    public static final String BASEURLMOVIE = "http://" + IP + ":5050/";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
     //private static PebbleThread pebbleThread;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public static void writeData(String url) {
         String finalurl = BASEURL + url;
         //System.out.println(finalurl);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public static void writeMovieData(String url) {
         String finalurl = BASEURLMOVIE + url;
         //System.out.println(finalurl);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

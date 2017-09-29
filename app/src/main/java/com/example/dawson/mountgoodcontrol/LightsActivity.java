@@ -87,10 +87,16 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                         @Override
                         public void run() {
                             getLightData("lights/status");
+                        }
+                    });
+                    Thread.sleep(1000*2);
+                    la.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
                             getWhosHomeData("whos-home");
                         }
                     });
-                    Thread.sleep(1000*5);
+                    Thread.sleep(1000*2);
                 }
                 catch (InterruptedException e) {
                     System.out.println("Thread interrupted");
@@ -102,7 +108,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     public void getLightData(String url) {
         String finalurl = MainActivity.BASEURL + url;
         //System.out.println(finalurl);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -124,7 +130,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     public void getWhosHomeData(String url) {
         String finalurl = MainActivity.BASEURL + url;
         //System.out.println(finalurl);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

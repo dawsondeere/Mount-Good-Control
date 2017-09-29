@@ -92,7 +92,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
     public static void getData(String url) {
         String finalurl = MainActivity.BASEURL + url;
         //System.out.println(finalurl);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, finalurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
