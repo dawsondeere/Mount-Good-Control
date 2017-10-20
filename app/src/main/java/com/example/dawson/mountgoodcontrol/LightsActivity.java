@@ -20,11 +20,6 @@ import com.android.volley.toolbox.StringRequest;
 public class LightsActivity extends AppCompatActivity implements View.OnTouchListener {
     private static UpdateThread upThread;
     public static LightsActivity la;
-    private static Button buttonLiving;
-    private static Button buttonLamp;
-    private static Button buttonStorm;
-    private static Button buttonAggies;
-    private static TextView textWhosHome;
     private static Drawable buttonBackground;
     private GestureDetector gestureDetector;
 
@@ -34,12 +29,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
         setContentView(R.layout.activity_lights);
 
         la = LightsActivity.this;
-        buttonLiving = (Button) findViewById(R.id.buttonMainLight);
-        buttonLamp = (Button) findViewById(R.id.buttonLamp);
-        buttonStorm = (Button) findViewById(R.id.buttonStorm);
-        buttonAggies = (Button) findViewById(R.id.buttonAggies);
-        textWhosHome = (TextView) findViewById(R.id.textWhosHome);
-        buttonBackground = buttonLiving.getBackground();
+        buttonBackground = findViewById(R.id.buttonMainLight).getBackground();
 
         gestureDetector = new GestureDetector(this,new OnSwipeListener(){
             @Override
@@ -166,10 +156,10 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
             String sw = buffer.substring(swStart, swEnd);
             String stat = buffer.substring(stStart, stEnd);
 
-            if (sw.equals("living")) { updateLights(buttonLiving, stat); }
-            else if (sw.equals("lamp")) { updateLights(buttonLamp, stat); }
-            else if (sw.equals("storm")) { updateLights(buttonStorm, stat); }
-            else if (sw.equals("aggies")) { updateLights(buttonAggies, stat); }
+            if (sw.equals("living")) { updateLights((Button) findViewById(R.id.buttonMainLight), stat); }
+            else if (sw.equals("lamp")) { updateLights((Button) findViewById(R.id.buttonLamp), stat); }
+            else if (sw.equals("storm")) { updateLights((Button) findViewById(R.id.buttonStorm), stat); }
+            else if (sw.equals("aggies")) { updateLights((Button) findViewById(R.id.buttonAggies), stat); }
         }
     }
 
@@ -185,8 +175,8 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     private void parseWhosHomeData(String buffer) {
-        if (buffer.equals("")) { textWhosHome.setText("Nobody is home");}
-        else { textWhosHome.setText(buffer); }
+        if (buffer.equals("")) { ((TextView) findViewById(R.id.textWhosHome)).setText("Nobody is home");}
+        else { ((TextView) findViewById(R.id.textWhosHome)).setText(buffer); }
     }
 
     public void sendData(View v) {

@@ -14,9 +14,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 public class MusicActivity extends AppCompatActivity implements View.OnTouchListener {
-    private static TextView songN;
-    private static TextView songA;
-    private static TextView songV;
     public static MusicActivity ma;
     private static UpdateThread upThread;
     private GestureDetector gestureDetector;
@@ -26,9 +23,6 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
         super.onCreate(savedInstanceState);
         ma = MusicActivity.this;
         setContentView(R.layout.activity_music);
-        songN = (TextView) findViewById(R.id.songName);
-        songA = (TextView) findViewById(R.id.songArtist);
-        songV = (TextView) findViewById(R.id.songVolume);
 
         gestureDetector = new GestureDetector(this,new OnSwipeListener(){
             @Override
@@ -89,7 +83,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
         }
     }
 
-    public static void getData(String url) {
+    public void getData(String url) {
         String finalurl = "http://" + MainActivity.IP + ":5000/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
@@ -111,7 +105,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
         MainActivity.queue.add(stringRequest);
     }
 
-    private static void parseData(String buffer) {
+    private void parseData(String buffer) {
         int pos1 = buffer.indexOf("!");
         int pos2 = buffer.indexOf("@");
         int pos3 = buffer.indexOf("#");
@@ -127,9 +121,9 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
 
         if (!songArtist.contains("is playing")) { songArtist = "by " + songArtist; }
 
-        songN.setText(songName);
-        songA.setText(songArtist);
-        songV.setText(songVolume);
+        ((TextView) findViewById(R.id.songName)).setText(songName);
+        ((TextView) findViewById(R.id.songArtist)).setText(songArtist);
+        ((TextView) findViewById(R.id.songVolume)).setText(songVolume);
     }
 
     public void sendData(View v) {
@@ -139,7 +133,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
             case R.id.buttonNextSong: MainActivity.writeData("music/next"); break;
             case R.id.buttonVolDown: MainActivity.writeData("music/volDown"); break;
             case R.id.buttonVolUp: MainActivity.writeData("music/volUp"); break;
-            case R.id.buttonStartMusic: if (songN.getText().toString().contains("No song")) { MainActivity.writeData("music/start"); } break;
+            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeData("music/start"); } break;
             case R.id.buttonStopMusic: MainActivity.writeData("music/stop"); break;
         }
     }
