@@ -15,6 +15,7 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
     public static String IP = "";
+    public static final String PREF_NAME = "com.dawson.mtgdctl.PREF";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        IP = getSharedPreferences(PREF_NAME, 0).getString("IP", "");
         queue = Volley.newRequestQueue(this);
         startActivity(new Intent(this, LightsActivity.class));
     }

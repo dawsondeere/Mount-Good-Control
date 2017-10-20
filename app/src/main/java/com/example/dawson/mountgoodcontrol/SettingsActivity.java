@@ -32,14 +32,16 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     @Override
     protected void onStart() {
         super.onStart();
-        ((EditText) findViewById(R.id.editIP)).setText(getPreferences(0).getString("IP", ""), TextView.BufferType.NORMAL);
+        System.out.println("IP that's stored is: " + getPreferences(0).getString("IP", ""));
+        ((EditText) findViewById(R.id.editIP)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", ""), TextView.BufferType.NORMAL);
     }
 
     @Override
     protected void onStop() {
-        SharedPreferences.Editor editor = getPreferences(0).edit();
+        SharedPreferences.Editor editor = getSharedPreferences(MainActivity.PREF_NAME, 0).edit();
         editor.putString("IP", ((EditText) findViewById(R.id.editIP)).getText().toString());
         editor.commit();
+        MainActivity.IP = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", "");
         super.onStop();
     }
 
