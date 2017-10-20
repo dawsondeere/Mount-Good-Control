@@ -1,7 +1,6 @@
 package com.example.dawson.mountgoodcontrol;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
@@ -11,7 +10,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -57,12 +55,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     @Override
     protected void onStart() {
         super.onStart();
-
-        SharedPreferences settings = getPreferences(0);
-        String ip = settings.getString("IP", "");
-        MainActivity.IP = ip;
-        ((EditText) findViewById(R.id.editIP)).setText(ip, TextView.BufferType.NORMAL);
-
+        MainActivity.IP = getPreferences(0).getString("IP", "");
         upThread = new LightsActivity.UpdateThread();
         upThread.start();
     }
@@ -70,10 +63,6 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     @Override
     protected void onStop() {
         upThread.cancel();
-        SharedPreferences settings = getPreferences(0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString("IP", ((EditText) findViewById(R.id.editIP)).getText().toString());
-        editor.commit();
         super.onStop();
     }
 
@@ -211,4 +200,5 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
 
     public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
     public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
 }

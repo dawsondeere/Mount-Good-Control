@@ -53,8 +53,19 @@
             tools:ignore="ButtonStyle"
             />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/buttonSwitchSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/switchSettings"
+            android:onClick="startSettings"
+            tools:ignore="ButtonStyle"
+            />
 
+    </LinearLayout>
+<!--
     <EditText
         android:id="@+id/editIP"
         android:layout_width="match_parent"
@@ -62,12 +73,12 @@
         android:layout_below="@id/buttonSwitches"
         android:inputType="text"
         />
-
+-->
     <Button
         android:id="@+id/buttonMainLight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editIP"
+        android:layout_below="@id/buttonSwitches"
         android:textColor="@color/colorPrimary"
         android:text="@string/buttonMainLight"
         android:onClick="sendData"

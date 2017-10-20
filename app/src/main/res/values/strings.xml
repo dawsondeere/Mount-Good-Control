@@ -25,6 +25,7 @@
     <string name="switchLights">Lights</string>
     <string name="switchMusic">Music</string>
     <string name="switchMovies">Movies</string>
+    <string name="switchSettings">Settings</string>
     <string name="textNoSong">No song</string>
     <string name="textIsPlaying">is playing</string>
     <string name="textVolume">Volume: ##</string>

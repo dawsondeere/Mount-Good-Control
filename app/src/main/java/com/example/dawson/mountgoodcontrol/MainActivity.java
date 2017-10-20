@@ -1,8 +1,6 @@
 package com.example.dawson.mountgoodcontrol;
 
 import android.content.Intent;
-//import android.content.IntentFilter;
-//import android.os.BatteryManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 

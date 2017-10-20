@@ -22,6 +22,7 @@
         <activity android:name=".MoviesActivity" />
         <activity android:name=".MovieInfoActivity" />
         <activity android:name=".MovieRemoteActivity" />
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>

@@ -50,6 +50,17 @@
             tools:ignore="ButtonStyle"
             />
 
+        <Button
+            android:id="@+id/buttonSwitchSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/switchSettings"
+            android:onClick="startSettings"
+            tools:ignore="ButtonStyle"
+            />
+
     </LinearLayout>
 
     <TextView
