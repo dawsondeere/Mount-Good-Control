@@ -1,6 +1,7 @@
 package com.example.dawson.mountgoodcontrol;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
@@ -10,6 +11,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -31,8 +33,9 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        la = LightsActivity.this;
         setContentView(R.layout.activity_lights);
+
+        la = LightsActivity.this;
         buttonLiving = (Button) findViewById(R.id.buttonMainLight);
         buttonLamp = (Button) findViewById(R.id.buttonLamp);
         buttonStorm = (Button) findViewById(R.id.buttonStorm);
@@ -54,6 +57,12 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     @Override
     protected void onStart() {
         super.onStart();
+
+        SharedPreferences settings = getPreferences(0);
+        String ip = settings.getString("IP", "");
+        MainActivity.IP = ip;
+        ((EditText) findViewById(R.id.editIP)).setText(ip, TextView.BufferType.NORMAL);
+
         upThread = new LightsActivity.UpdateThread();
         upThread.start();
     }
@@ -61,6 +70,10 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     @Override
     protected void onStop() {
         upThread.cancel();
+        SharedPreferences settings = getPreferences(0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString("IP", ((EditText) findViewById(R.id.editIP)).getText().toString());
+        editor.commit();
         super.onStop();
     }
 
@@ -106,7 +119,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getLightData(String url) {
-        String finalurl = MainActivity.BASEURL + url;
+        String finalurl = "http://" + MainActivity.IP + ":5000/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -128,7 +141,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getWhosHomeData(String url) {
-        String finalurl = MainActivity.BASEURL + url;
+        String finalurl = "http://" + MainActivity.IP + ":5000/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
