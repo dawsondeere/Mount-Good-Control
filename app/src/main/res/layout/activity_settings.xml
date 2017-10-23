@@ -46,6 +46,15 @@
             />
 
         <ImageView
+            android:id="@+id/imageRemote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_remote_bl"
+            android:onClick="startRemote"
+            />
+
+        <ImageView
             android:id="@+id/imageSettings"
             android:layout_width="0dp"
             android:layout_height="match_parent"

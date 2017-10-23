@@ -1,14 +1,36 @@
 package com.example.dawson.mountgoodcontrol;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 
-public class MovieRemoteActivity extends AppCompatActivity {
+public class MovieRemoteActivity extends AppCompatActivity implements View.OnTouchListener {
+    private GestureDetector gestureDetector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movieremote);
+
+        gestureDetector = new GestureDetector(this,new OnSwipeListener(){
+            @Override
+            public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
+                if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
+                if (direction == Direction.right) { startMovies(null); }
+                else if (direction == Direction.left) { startSettings(null); }
+                return true;
+            }
+        });
+        findViewById(R.id.activity_movieremote).setOnTouchListener(this);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        gestureDetector.onTouchEvent(event);
+        return true;
     }
 
     public void sendData(View v) {
@@ -26,4 +48,9 @@ public class MovieRemoteActivity extends AppCompatActivity {
             case R.id.buttonMovieStop: MainActivity.writeMovieData("remote/stop"); break;
         }
     }
+
+    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
+    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
+    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
 }

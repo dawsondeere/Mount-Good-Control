@@ -37,7 +37,7 @@ public class MoviesActivity extends AppCompatActivity implements View.OnTouchLis
             public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
                 if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
                 if (direction == Direction.right) { startMusic(null); }
-                else if (direction == Direction.left) { startSettings(null); }
+                else if (direction == Direction.left) { startRemote(null); }
                 return true;
             }
         });
@@ -225,8 +225,8 @@ public class MoviesActivity extends AppCompatActivity implements View.OnTouchLis
         startActivity(passIntent);
     }
 
-    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
     public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
     public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
+    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
     public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
 }

@@ -22,7 +22,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
             @Override
             public boolean onSwipe(Direction direction, float velocityX, float velocityY) {
                 if (Math.abs(velocityX) < MainActivity.SWIPE_THRESHOLD_VELOCITY) { return true; }
-                if (direction == Direction.right) { startMovies(null); }
+                if (direction == Direction.right) { startRemote(null); }
                 return true;
             }
         });
@@ -54,4 +54,5 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
     public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
     public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
+    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
 }

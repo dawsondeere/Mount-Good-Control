@@ -45,6 +45,15 @@
             />
 
         <ImageView
+            android:id="@+id/imageRemote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_remote_bl"
+            android:onClick="startRemote"
+            />
+
+        <ImageView
             android:id="@+id/imageSettings"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -55,22 +64,10 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonMovieRemote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSwitches"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/buttonRemote"
-        android:onClick="startRemote"
-        tools:ignore="ButtonStyle"
-        />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonMovieRemote"
+        android:layout_below="@id/buttonSwitches"
         >
 
         <LinearLayout
