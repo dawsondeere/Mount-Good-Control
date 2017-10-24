@@ -63,7 +63,7 @@
             />
 
     </LinearLayout>
-    
+
     <Button
         android:id="@+id/buttonMainLight"
         android:layout_width="match_parent"
@@ -125,7 +125,7 @@
         android:lines="4"
         android:textColor="@color/colorPrimary"
         android:textSize="16pt"
-        android:text="Nobody is home"
+        android:text=""
         />
 
 </RelativeLayout>
