@@ -63,15 +63,7 @@
             />
 
     </LinearLayout>
-<!--
-    <EditText
-        android:id="@+id/editIP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSwitches"
-        android:inputType="text"
-        />
--->
+    
     <Button
         android:id="@+id/buttonMainLight"
         android:layout_width="match_parent"
