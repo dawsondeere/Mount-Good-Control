@@ -27,7 +27,6 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lights);
-        System.out.println("IP that's stored is: " + getPreferences(0).getString("IP", ""));
 
         la = LightsActivity.this;
         buttonBackground = findViewById(R.id.buttonMainLight).getBackground();

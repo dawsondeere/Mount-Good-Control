@@ -32,7 +32,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     @Override
     protected void onStart() {
         super.onStart();
-        System.out.println("IP that's stored is: " + getPreferences(0).getString("IP", ""));
         ((EditText) findViewById(R.id.editIP)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", ""), TextView.BufferType.NORMAL);
     }
 
