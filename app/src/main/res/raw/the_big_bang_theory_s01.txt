@@ -1,0 +1,17 @@
+E01: Pilot
+E02: The Big Bran Hypothesis
+E03: The Fuzzy Boots Corollary
+E04: The Luminous Fish Effect
+E05: The Hamburger Postulate
+E06: The Middle Earth Paradigm
+E07: The Dumpling Paradox
+E08: The Grasshopper Experiment
+E09: The Cooper-Hofstadter Polarization
+E10: The Loobenfeld Decay
+E11: The Pancake Batter Anomaly
+E12: The Jerusalem Duality
+E13: The Bat Jar Conjecture
+E14: The Nerdvana Annihilation
+E15: The Pork Chop Indeterminacy
+E16: The Peanut Reaction
+E17: The Tangerine Factor

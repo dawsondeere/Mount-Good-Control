@@ -1,0 +1,20 @@
+E01: The Avatar State
+E02: The Cave of Two Lovers
+E03: Return to Omashu
+E04: The Swamp
+E05: Avatar Day
+E06: The Blind Bandit
+E07: Zuko Alone
+E08: The Chase
+E09: Bitter Work
+E10: The Library
+E11: The Desert
+E12: The Serpent's Pass
+E13: The Drill
+E14: City of Walls and Secrets
+E15: The Tales of Ba Sing Se
+E16: Appa's Lost Days
+E17: Lake Laogai
+E18: The Earth King
+E19: The Guru
+E20: The Crossroads of Destiny

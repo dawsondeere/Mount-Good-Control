@@ -6,4 +6,5 @@
     <dimen name="menu_margin_bottom">1dp</dimen>
     <dimen name="menu_padding_bottom">2dp</dimen>
     <dimen name="menu_padding_top">1dp</dimen>
+    <dimen name="ep_play_height">25dp</dimen>
 </resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_movies"
+    android:id="@+id/activity_shows"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dawson.mountgoodcontrol.MoviesActivity"
+    tools:context="com.example.dawson.mountgoodcontrol.ShowsActivity"
     tools:ignore="ContentDescription"
     >
 
@@ -41,7 +41,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/mtgd_movie_ma"
+            android:src="@drawable/mtgd_movie_bl"
+            android:onClick="startMovies"
             />
 
         <ImageView
@@ -49,8 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/mtgd_tv_bl"
-            android:onClick="startShows"
+            android:src="@drawable/mtgd_tv_ma"
             />
 
         <ImageView
@@ -81,7 +81,7 @@
         >
 
         <LinearLayout
-            android:id="@+id/movieLayout"
+            android:id="@+id/showsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
