@@ -76,157 +76,119 @@
     <LinearLayout
         android:id="@+id/buttonRemoteOne"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/buttonSwitches"
         android:orientation="horizontal"
         >
 
-        <Button
+        <ImageView
             android:id="@+id/buttonPrevChapter"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="Prev chapter"
+            android:src="@drawable/mtgd_prev"
             android:onClick="sendData"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonMoviePlayPause"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="Play/Pause"
+            android:src="@drawable/mtgd_play_pause"
             android:onClick="sendData"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonNextChapter"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="Next chapter"
+            android:src="@drawable/mtgd_next"
             android:onClick="sendData"
             />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/buttonSixtySkip"
+        android:id="@+id/buttonSkips"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/buttonRemoteOne"
         android:orientation="horizontal"
         >
 
-        <Button
+        <ImageView
             android:id="@+id/buttonMedBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="60 seconds back"
+            android:src="@drawable/mtgd_rewind_60"
             android:onClick="sendData"
             />
 
-        <Button
-            android:id="@+id/buttonMedForward"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="60 seconds forward"
-            android:onClick="sendData"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonTenSkip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSixtySkip"
-        android:orientation="horizontal"
-        >
-
-        <Button
+        <ImageView
             android:id="@+id/buttonShortBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="10 seconds back"
+            android:src="@drawable/mtgd_rewind_10"
             android:onClick="sendData"
             />
 
-        <Button
-            android:id="@+id/buttonShortForward"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="10 seconds forward"
-            android:onClick="sendData"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttonThreeSkip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonTenSkip"
-        android:orientation="horizontal"
-        >
-
-        <Button
+        <ImageView
             android:id="@+id/buttonVeryShortBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="3 seconds back"
+            android:src="@drawable/mtgd_rewind_3"
             android:onClick="sendData"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonVeryShortForward"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:lines="2"
-            android:textColor="@color/colorPrimary"
-            android:text="3 seconds forward"
+            android:src="@drawable/mtgd_fast_forward_3"
+            android:onClick="sendData"
+            />
+
+        <ImageView
+            android:id="@+id/buttonShortForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_fast_forward_10"
+            android:onClick="sendData"
+            />
+
+        <ImageView
+            android:id="@+id/buttonMedForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_fast_forward_60"
             android:onClick="sendData"
             />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonNextEpisode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSkips"
+        android:textColor="@color/colorPrimary"
+        android:text="Play next episode"
+        android:onClick="sendData"
+        />
 
     <Button
         android:id="@+id/buttonToggleSubtitles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonThreeSkip"
+        android:layout_below="@id/buttonNextEpisode"
         android:textColor="@color/colorPrimary"
         android:text="Toggle Subtitles"
         android:onClick="sendData"

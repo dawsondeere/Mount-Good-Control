@@ -106,39 +106,56 @@
     <LinearLayout
         android:id="@+id/musicControl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/songVolume"
         >
 
-        <Button
+        <ImageView
+            android:id="@+id/buttonVolDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_vol_down"
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
+
+        <ImageView
             android:id="@+id/buttonPrevSong"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonPrevSong"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_prev"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonPlayPause"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonPlayMusic"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_play_pause"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonNextSong"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonNextSong"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_next"
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
+
+        <ImageView
+            android:id="@+id/buttonVolUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_vol_up"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
@@ -151,28 +168,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/musicControl"
         >
-
-        <Button
-            android:id="@+id/buttonVolDown"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonVolDown"
-            android:onClick="sendData"
-            tools:ignore="ButtonStyle"
-            />
-
-        <Button
-            android:id="@+id/buttonVolUp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonVolUp"
-            android:onClick="sendData"
-            tools:ignore="ButtonStyle"
-            />
 
     </LinearLayout>
 
