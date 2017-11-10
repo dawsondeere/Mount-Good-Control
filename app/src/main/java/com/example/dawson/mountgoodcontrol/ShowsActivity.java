@@ -152,9 +152,9 @@ public class ShowsActivity extends AppCompatActivity implements View.OnTouchList
         startActivity(passIntent);
     }
 
-    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
-    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
-    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
-    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
-    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
+    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); finish(); }
+    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); finish(); }
+    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); finish(); }
+    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); finish(); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); finish(); }
 }

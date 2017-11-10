@@ -225,9 +225,9 @@ public class MoviesActivity extends AppCompatActivity implements View.OnTouchLis
         startActivity(passIntent);
     }
 
-    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
-    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
-    public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); }
-    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
-    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
+    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); finish(); }
+    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); finish(); }
+    public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); finish(); }
+    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); finish(); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); finish(); }
 }

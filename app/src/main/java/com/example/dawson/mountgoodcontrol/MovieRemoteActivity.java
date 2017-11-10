@@ -44,14 +44,15 @@ public class MovieRemoteActivity extends AppCompatActivity implements View.OnTou
             case R.id.buttonShortForward: MainActivity.writeMovieData("remote/shortForward"); break;
             case R.id.buttonVeryShortBack: MainActivity.writeMovieData("remote/veryShortBack"); break;
             case R.id.buttonVeryShortForward: MainActivity.writeMovieData("remote/veryShortForward"); break;
+            case R.id.buttonNextEpisode: MainActivity.writeMovieData("remote/nextEpisode"); break;
             case R.id.buttonToggleSubtitles: MainActivity.writeMovieData("remote/toggleSubtitle"); break;
             case R.id.buttonMovieStop: MainActivity.writeMovieData("remote/stop"); break;
         }
     }
 
-    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
-    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
-    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
-    public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); }
-    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
+    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); finish(); }
+    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); finish(); }
+    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); finish(); }
+    public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); finish(); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); finish(); }
 }
