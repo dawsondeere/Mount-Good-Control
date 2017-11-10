@@ -3,6 +3,7 @@ package com.example.dawson.mountgoodcontrol;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -70,4 +71,11 @@ public class MainActivity extends AppCompatActivity {
         queue = Volley.newRequestQueue(this);
         startActivity(new Intent(this, LightsActivity.class));
     }
+
+    public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); }
+    public void startMusic(View v) { startActivity(new Intent(this, MusicActivity.class)); }
+    public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); }
+    public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); }
+    public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); }
+    public void startSettings(View v) { startActivity(new Intent(this, SettingsActivity.class)); }
 }

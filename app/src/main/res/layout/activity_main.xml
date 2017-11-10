@@ -3,14 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.dawson.mountgoodcontrol.MainActivity">
+    tools:context="com.example.dawson.mountgoodcontrol.MainActivity"
+    tools:ignore="ContentDescription"
+    >
 
-    <TextView
-        android:id="@+id/textError"
+    <LinearLayout
+        android:id="@+id/buttonSwitches"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:lines="1"
-        />
+        android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/menu_margin_bottom"
+        android:paddingTop="@dimen/menu_padding_top"
+        android:paddingBottom="@dimen/menu_padding_bottom"
+        android:background="@drawable/menu_background"
+        >
+
+        <ImageView
+            android:id="@+id/imageLight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_light_ma"
+            />
+
+        <ImageView
+            android:id="@+id/imageMusic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_music_bl"
+            android:onClick="startMusic"
+            />
+
+        <ImageView
+            android:id="@+id/imageMovies"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_movie_bl"
+            android:onClick="startMovies"
+            />
+
+        <ImageView
+            android:id="@+id/imageShows"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_tv_bl"
+            android:onClick="startShows"
+            />
+
+        <ImageView
+            android:id="@+id/imageRemote"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_remote_bl"
+            android:onClick="startRemote"
+            />
+
+        <ImageView
+            android:id="@+id/imageSettings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_settings_bl"
+            android:onClick="startSettings"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
