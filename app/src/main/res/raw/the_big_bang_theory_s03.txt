@@ -1,0 +1,23 @@
+E01: The Electric Can Opener Fluctuation
+E02: The Jiminy Conjecture
+E03: The Gothowitz Deviation
+E04: The Pirate Solution
+E05: The Creepy Candy Coating Corollary
+E06: The Cornhusker Vortex
+E07: The Guitarist Amplification
+E08: The Adhesive Duck Deficiency
+E09: The Vengeance Formulation
+E10: The Gorilla Experiment
+E11: The Maternal Congruence
+E12: The Psychic Vortex
+E13: The Bozeman Reaction
+E14: The Einstein Approximation
+E15: The Large Hadron Collision
+E16: The Excelsior Acquisition
+E17: The Precious Fragmentation
+E18: The Pants Alternative
+E19: The Wheaton Recurrence
+E20: The Spaghetti Catalyst
+E21: The Plimpton Stimulation
+E22: The Staircase Implementation
+E23: The Lunar Excitation

@@ -1,0 +1,16 @@
+E01: Withdrawal
+E02: Need to Know
+E03: Copycat Caffrey
+E04: By the Book
+E05: Unfinished Business
+E06: In the Red
+E07: Prisoner's Dilemma
+E08: Company Man
+E09: Point Blank
+E10: Burke's Seven
+E11: Forging Bonds
+E12: What Happens in Burma
+E13: Countermeasures
+E14: Payback
+E15: Power Play
+E16: Under the Radar

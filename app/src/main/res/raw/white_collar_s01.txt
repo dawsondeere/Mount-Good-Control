@@ -1,1 +1,14 @@
 E01: Pilot
+E02: Threads
+E03: Book of Hours
+E04: Flip of the Coin
+E05: The Portrait
+E06: All In
+E07: Free Fall
+E08: Hard Sell
+E09: Bad Judgement
+E10: Vital Signs
+E11: Home Invasion
+E12: Bottlenecked
+E13: Front Man
+E14: Out of the Box

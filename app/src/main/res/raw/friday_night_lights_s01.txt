@@ -1,1 +1,22 @@
 E01: Pilot
+E02: Eyes Wide Open
+E03: Wind Sprints
+E04: Who's Your Daddy
+E05: Git 'er Done
+E06: El Accidente
+E07: Homecoming
+E08: Crossing the Line
+E09: Full Hearts
+E10: It's Different for Girls
+E11: Nevermind
+E12: What to Do While You're Waiting
+E13: Little Girl I Wanna Marry You
+E14: Upping the Ante
+E15: Blinders
+E16: Black Eyes and Broken Hearts
+E17: I Think We Should Have Sex
+E18: Extended Families
+E19: Ch-Ch-Ch-Ch-Changes
+E20: Mud Bowl
+E21: Best Laid Plans
+E22: State

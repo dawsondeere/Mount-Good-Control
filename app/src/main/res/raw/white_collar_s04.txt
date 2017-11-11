@@ -1,0 +1,16 @@
+E01: Wanted
+E02: Most Wanted
+E03: Diminishing Returns
+E04: Parting Shots
+E05: Honor Among Thieves
+E06: Identity Crisis
+E07: Compromising Positions
+E08: Ancient History
+E09: Gloves Off
+E10: Vested Interest
+E11: Family Business
+E12: Brass Tacks
+E13: Empire City
+E14: Shoot the Moon
+E15: The Original
+E16: In the Wind

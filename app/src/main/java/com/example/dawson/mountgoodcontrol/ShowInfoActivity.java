@@ -89,7 +89,7 @@ public class ShowInfoActivity extends AppCompatActivity {
         String line;
         try {
             while ((line = bufferedReader.readLine()) != null) {
-                final int epNum = Integer.parseInt(line.substring(1,3));
+                final String epNum = line.substring(1,3);
                 LinearLayout linLay = new LinearLayout(this);
                 linLay.setOrientation(LinearLayout.HORIZONTAL);
                 linLay.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -108,8 +108,8 @@ public class ShowInfoActivity extends AppCompatActivity {
                 tempImage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String filename = formatTitle(title) + "S" + seasonNum + "E" + epNum;
-                        MainActivity.writeMovieData("shows/" + filename);
+                        String filename = formatTitle(title) + "-s" + seasonNum + "e" + epNum;
+                        MainActivity.writeMovieData("show/" + filename);
                     }
                 });
 
@@ -130,14 +130,34 @@ public class ShowInfoActivity extends AppCompatActivity {
             case "Avatar: The Last Airbender 03": return R.raw.avatar_the_last_airbender_s03;
             case "The Big Bang Theory 01": return R.raw.the_big_bang_theory_s01;
             case "The Big Bang Theory 02": return R.raw.the_big_bang_theory_s02;
+            case "The Big Bang Theory 03": return R.raw.the_big_bang_theory_s03;
+            case "The Big Bang Theory 04": return R.raw.the_big_bang_theory_s04;
+            case "The Big Bang Theory 05": return R.raw.the_big_bang_theory_s05;
+            case "The Big Bang Theory 06": return R.raw.the_big_bang_theory_s06;
+            case "The Big Bang Theory 07": return R.raw.the_big_bang_theory_s07;
+            case "The Big Bang Theory 08": return R.raw.the_big_bang_theory_s08;
             case "Duck Dynasty 01": return R.raw.duck_dynasty_s01;
             case "Duck Dynasty 02": return R.raw.duck_dynasty_s02;
             case "Duck Dynasty 03": return R.raw.duck_dynasty_s03;
             case "Friday Night Lights 01": return R.raw.friday_night_lights_s01;
+            case "Friday Night Lights 02": return R.raw.friday_night_lights_s02;
+            case "Friday Night Lights 03": return R.raw.friday_night_lights_s03;
+            case "Friday Night Lights 04": return R.raw.friday_night_lights_s04;
+            case "Friday Night Lights 05": return R.raw.friday_night_lights_s05;
             case "Full House 01": return R.raw.full_house_s01;
             case "NCIS 01": return R.raw.ncis_s01;
             case "Reba 01": return R.raw.reba_s01;
+            case "Reba 02": return R.raw.reba_s02;
+            case "Reba 03": return R.raw.reba_s03;
+            case "Reba 04": return R.raw.reba_s04;
+            case "Reba 05": return R.raw.reba_s05;
+            case "Reba 06": return R.raw.reba_s06;
             case "White Collar 01": return R.raw.white_collar_s01;
+            case "White Collar 02": return R.raw.white_collar_s02;
+            case "White Collar 03": return R.raw.white_collar_s03;
+            case "White Collar 04": return R.raw.white_collar_s04;
+            case "White Collar 05": return R.raw.white_collar_s05;
+            case "White Collar 06": return R.raw.white_collar_s06;
             default: return -1;
         }
     }
