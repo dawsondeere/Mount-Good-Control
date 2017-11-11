@@ -185,12 +185,32 @@
         />
 
     <Button
-        android:id="@+id/buttonToggleSubtitles"
+        android:id="@+id/buttonNextSeason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonNextEpisode"
         android:textColor="@color/colorPrimary"
+        android:text="Play next season"
+        android:onClick="sendData"
+        />
+
+    <Button
+        android:id="@+id/buttonToggleSubtitles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNextSeason"
+        android:textColor="@color/colorPrimary"
         android:text="Toggle Subtitles"
+        android:onClick="sendData"
+        />
+
+    <Button
+        android:id="@+id/buttonMoveMouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonToggleSubtitles"
+        android:textColor="@color/colorPrimary"
+        android:text="Move mouse"
         android:onClick="sendData"
         />
 
@@ -198,7 +218,7 @@
         android:id="@+id/buttonMovieStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonToggleSubtitles"
+        android:layout_below="@id/buttonMoveMouse"
         android:textColor="@color/colorPrimary"
         android:text="Stop"
         android:onClick="sendData"
