@@ -21,6 +21,7 @@ public class MovieInfoActivity extends AppCompatActivity {
 
         ((TextView) findViewById(R.id.movieInfoTitle)).setText(title);
         ((TextView) findViewById(R.id.movieInfoDescription)).setText(getDescription(title));
+        ((TextView) findViewById(R.id.movieInfoRuntime)).setText(getRuntime(title));
         ((ImageView) findViewById(R.id.movieInfoImage)).setImageResource(getImage(title));
     }
 
@@ -48,6 +49,30 @@ public class MovieInfoActivity extends AppCompatActivity {
         }
 
         return description;
+    }
+
+    private String getRuntime(String title) {
+        StringBuilder runtime = new StringBuilder("Runtime: ");
+
+        InputStream inputStream = this.getResources().openRawResource(R.raw.runtimes);
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+        String line;
+        try {
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.contains(title)) {
+                    int runIndex = line.indexOf(" - ") + 3;
+                    runtime.append(line.substring(runIndex));
+                    runtime.append(" mins");
+                }
+            }
+        }
+        catch (IOException e) {
+            runtime = new StringBuilder("Error getting runtime from file");
+        }
+
+        return runtime.toString();
     }
 
     private int getImage(String title) {
