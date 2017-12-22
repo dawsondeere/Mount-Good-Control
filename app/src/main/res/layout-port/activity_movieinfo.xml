@@ -25,7 +25,7 @@
             android:src="@drawable/medium_no_image"
             tools:ignore="ContentDescription"
             />
-
+<!--
         <TextView
             android:id="@+id/movieInfoDescription"
             android:layout_width="match_parent"
@@ -36,17 +36,35 @@
             android:textSize="10pt"
             android:text="Description"
             />
-
-        <TextView
-            android:id="@+id/movieInfoRuntime"
+-->
+        <LinearLayout
+            android:id="@+id/movieInfo"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_margin="20dp"
-            android:gravity="start"
-            android:textSize="10pt"
-            android:text="Runtime: "
-            />
+            >
+
+            <TextView
+                android:id="@+id/movieInfoRuntime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="10pt"
+                android:text="Runtime: "
+                />
+
+            <TextView
+                android:id="@+id/movieInfoRating"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="10pt"
+                android:text="Rating: "
+                />
+
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"

@@ -20,39 +20,14 @@ public class MovieInfoActivity extends AppCompatActivity {
         String title = getIntent().getExtras().getString("title");
 
         ((TextView) findViewById(R.id.movieInfoTitle)).setText(title);
-        ((TextView) findViewById(R.id.movieInfoDescription)).setText(getDescription(title));
-        ((TextView) findViewById(R.id.movieInfoRuntime)).setText(getRuntime(title));
         ((ImageView) findViewById(R.id.movieInfoImage)).setImageResource(getImage(title));
+        setRuntimeAndRating(title);
     }
 
-    private String getDescription(String title) {
-        String description = "Description for " + title;
 
-        InputStream inputStream = this.getResources().openRawResource(R.raw.descriptions);
-        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-        String line;
-        try {
-            while ((line = bufferedReader.readLine()) != null) {
-                if (line.contains(title)) {
-                    description = line;
-                }
-            }
-            if (!description.equals("Description for " + title)) {
-                int descIndex = description.indexOf(" - ") + 3;
-                description = description.substring(descIndex);
-            }
-        }
-        catch (IOException e) {
-            description = "Error getting description from file";
-        }
-
-        return description;
-    }
-
-    private String getRuntime(String title) {
+    private void setRuntimeAndRating(String title) {
         StringBuilder runtime = new StringBuilder("Runtime: ");
+        String rating = "";
 
         InputStream inputStream = this.getResources().openRawResource(R.raw.runtimes);
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -63,8 +38,11 @@ public class MovieInfoActivity extends AppCompatActivity {
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains(title)) {
                     int runIndex = line.indexOf(" - ") + 3;
-                    runtime.append(line.substring(runIndex));
+                    int commaIndex = line.indexOf(",", runIndex);
+                    runtime.append(line.substring(runIndex,commaIndex));
                     runtime.append(" mins");
+                    rating = "Rating: " + line.substring(commaIndex+1);
+                    break;
                 }
             }
         }
@@ -72,7 +50,9 @@ public class MovieInfoActivity extends AppCompatActivity {
             runtime = new StringBuilder("Error getting runtime from file");
         }
 
-        return runtime.toString();
+        ((TextView)findViewById(R.id.movieInfoRuntime)).setText(runtime.toString());
+        ((TextView)findViewById(R.id.movieInfoRating)).setText(rating);
+
     }
 
     private int getImage(String title) {
