@@ -163,20 +163,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/musicVolume"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/musicControl"
-        >
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/musicStartStop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/musicVolume"
-        android:layout_marginBottom="@dimen/bottom_padding_group"
+        android:layout_below="@id/musicControl"
         >
 
         <Button
