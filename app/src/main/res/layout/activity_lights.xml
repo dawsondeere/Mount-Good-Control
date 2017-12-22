@@ -73,63 +73,60 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonMainLight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonSwitches"
-        android:textColor="@color/colorPrimary"
-        android:text="@string/buttonMainLight"
-        android:onClick="sendData"
-        />
-
     <LinearLayout
-        android:id="@+id/moreLights"
+        android:id="@+id/lightsControl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonMainLight"
-        android:layout_marginBottom="@dimen/bottom_padding_group"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonSwitches"
         >
 
-        <Button
+        <ImageView
+            android:id="@+id/buttonMainLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_living_bl"
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
+
+        <ImageView
             android:id="@+id/buttonLamp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonLamp"
+            android:src="@drawable/mtgd_lamp_bl"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonStorm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonStorm"
+            android:src="@drawable/mtgd_storm_bl"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonAggies"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonAggies"
+            android:src="@drawable/mtgd_aggies_bl"
             android:onClick="sendData"
             tools:ignore="ButtonStyle"
             />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/textWhosHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/moreLights"
+        android:layout_below="@id/lightsControl"
         android:gravity="center_horizontal"
         android:lines="4"
         android:textColor="@color/colorPrimary"

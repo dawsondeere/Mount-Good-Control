@@ -10,6 +10,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -20,7 +21,6 @@ import com.android.volley.toolbox.StringRequest;
 public class LightsActivity extends AppCompatActivity implements View.OnTouchListener {
     private static UpdateThread upThread;
     public static LightsActivity la;
-    private static Drawable buttonBackground;
     private GestureDetector gestureDetector;
 
     @Override
@@ -29,7 +29,6 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
         setContentView(R.layout.activity_lights);
 
         la = LightsActivity.this;
-        buttonBackground = findViewById(R.id.buttonMainLight).getBackground();
 
         gestureDetector = new GestureDetector(this,new OnSwipeListener(){
             @Override
@@ -155,21 +154,29 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
             String sw = buffer.substring(swStart, swEnd);
             String stat = buffer.substring(stStart, stEnd);
 
-            if (sw.equals("living")) { updateLights((Button) findViewById(R.id.buttonMainLight), stat); }
-            else if (sw.equals("lamp")) { updateLights((Button) findViewById(R.id.buttonLamp), stat); }
-            else if (sw.equals("storm")) { updateLights((Button) findViewById(R.id.buttonStorm), stat); }
-            else if (sw.equals("aggies")) { updateLights((Button) findViewById(R.id.buttonAggies), stat); }
+            if (sw.equals("living")) { updateLights((ImageView) findViewById(R.id.buttonMainLight), stat); }
+            else if (sw.equals("lamp")) { updateLights((ImageView) findViewById(R.id.buttonLamp), stat); }
+            else if (sw.equals("storm")) { updateLights((ImageView) findViewById(R.id.buttonStorm), stat); }
+            else if (sw.equals("aggies")) { updateLights((ImageView) findViewById(R.id.buttonAggies), stat); }
         }
     }
 
-    private void updateLights(Button button, String stat) {
+    private void updateLights(ImageView button, String stat) {
         if (stat.equals("ON")) {
-            button.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button));
-            button.setTextColor(Color.WHITE);
+            switch (button.getId()) {
+                case R.id.buttonMainLight: button.setImageResource(R.drawable.mtgd_living_ma); break;
+                case R.id.buttonLamp: button.setImageResource(R.drawable.mtgd_lamp_ma); break;
+                case R.id.buttonStorm: button.setImageResource(R.drawable.mtgd_storm_ma); break;
+                case R.id.buttonAggies: button.setImageResource(R.drawable.mtgd_aggies_ma); break;
+            }
         }
         else if (stat.equals("OFF")) {
-            button.setBackground(buttonBackground);
-            button.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+            switch (button.getId()) {
+                case R.id.buttonMainLight: button.setImageResource(R.drawable.mtgd_living_bl); break;
+                case R.id.buttonLamp: button.setImageResource(R.drawable.mtgd_lamp_bl); break;
+                case R.id.buttonStorm: button.setImageResource(R.drawable.mtgd_storm_bl); break;
+                case R.id.buttonAggies: button.setImageResource(R.drawable.mtgd_aggies_bl); break;
+            }
         }
     }
 
