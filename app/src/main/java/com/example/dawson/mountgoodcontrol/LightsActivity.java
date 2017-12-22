@@ -1,15 +1,11 @@
 package com.example.dawson.mountgoodcontrol;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -154,10 +150,12 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
             String sw = buffer.substring(swStart, swEnd);
             String stat = buffer.substring(stStart, stEnd);
 
-            if (sw.equals("living")) { updateLights((ImageView) findViewById(R.id.buttonMainLight), stat); }
-            else if (sw.equals("lamp")) { updateLights((ImageView) findViewById(R.id.buttonLamp), stat); }
-            else if (sw.equals("storm")) { updateLights((ImageView) findViewById(R.id.buttonStorm), stat); }
-            else if (sw.equals("aggies")) { updateLights((ImageView) findViewById(R.id.buttonAggies), stat); }
+            switch (sw) {
+                case "living": updateLights((ImageView) findViewById(R.id.buttonMainLight), stat); break;
+                case "lamp": updateLights((ImageView) findViewById(R.id.buttonLamp), stat); break;
+                case "storm": updateLights((ImageView) findViewById(R.id.buttonStorm), stat); break;
+                case "aggies": updateLights((ImageView) findViewById(R.id.buttonAggies), stat); break;
+            }
         }
     }
 
