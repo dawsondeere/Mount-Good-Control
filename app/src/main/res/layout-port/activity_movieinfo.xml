@@ -25,18 +25,7 @@
             android:src="@drawable/medium_no_image"
             tools:ignore="ContentDescription"
             />
-<!--
-        <TextView
-            android:id="@+id/movieInfoDescription"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3"
-            android:layout_margin="20dp"
-            android:gravity="start"
-            android:textSize="10pt"
-            android:text="Description"
-            />
--->
+
         <LinearLayout
             android:id="@+id/movieInfo"
             android:orientation="horizontal"

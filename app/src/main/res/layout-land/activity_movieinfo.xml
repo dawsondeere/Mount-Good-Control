@@ -20,8 +20,8 @@
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
         android:orientation="vertical"
         >
 
@@ -34,17 +34,7 @@
             android:textSize="16pt"
             android:text="Title"
             />
-<!--
-        <TextView
-            android:id="@+id/movieInfoDescription"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:gravity="start"
-            android:textSize="10pt"
-            android:text="Description"
-            />
--->
+
         <LinearLayout
             android:id="@+id/movieInfo"
             android:orientation="horizontal"
