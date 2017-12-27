@@ -1,1 +1,23 @@
-E01: Pilot
+E01: Yankee White
+E02: Hung Out to Dry
+E03: Seadog
+E04: The Immortals
+E05: The Curse
+E06: High Seas
+E07: Sub Rosa
+E08: Minimum Security
+E09: Marine Down
+E10: Left for Dead
+E11: Eye Spy
+E12: My Other Left Foot
+E13: One Shot, One Kill
+E14: The Good Samaritan
+E15: Enigma
+E16: Bete Noire
+E17: The Truth Is Out There
+E18: UnSEALed
+E19: Dead Man Talking
+E20: Missing
+E21: Split Decision
+E22: A Weak Link
+E23: Reveille
