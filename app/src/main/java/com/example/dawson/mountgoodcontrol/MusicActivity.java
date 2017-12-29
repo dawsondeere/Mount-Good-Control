@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -13,10 +16,18 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicActivity extends AppCompatActivity implements View.OnTouchListener {
     public static MusicActivity ma;
     private static UpdateThread upThread;
     private GestureDetector gestureDetector;
+    private String playlistName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +45,8 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
             }
         });
         findViewById(R.id.activity_music).setOnTouchListener(this);
+
+        populateSpinner();
     }
 
     @Override
@@ -81,6 +94,46 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
                 }
             }
         }
+    }
+
+    private void populateSpinner() {
+        List<String> spinnerArray =  new ArrayList<String>();
+        InputStream inputStream = this.getResources().openRawResource(R.raw.playlists);
+        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+        String line;
+        try {
+            while ((line = bufferedReader.readLine()) != null) {
+                spinnerArray.add(line);
+            }
+        }
+        catch (IOException e) {
+            System.out.println("Error getting playlists from file");
+        }
+
+        System.out.println("SpinnerArray size: " + spinnerArray.size());
+        for (int i = 0; i < spinnerArray.size(); i++) {
+            System.out.println(spinnerArray.get(i));
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerArray);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner playlistSpinner = (Spinner) findViewById(R.id.spinnerPlaylists);
+        playlistSpinner.setAdapter(adapter);
+        playlistSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int pos, long id)
+            {
+                playlistName = (String) parentView.getItemAtPosition(pos);
+                //MainActivity.writeData("music/start/" + formatTitle(playlistName));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView)
+            {}
+        });
     }
 
     public void getData(String url) {
@@ -133,9 +186,26 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
             case R.id.buttonNextSong: MainActivity.writeData("music/next"); break;
             case R.id.buttonVolDown: MainActivity.writeData("music/volDown"); break;
             case R.id.buttonVolUp: MainActivity.writeData("music/volUp"); break;
-            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeData("music/start"); } break;
             case R.id.buttonStopMusic: MainActivity.writeData("music/stop"); break;
+            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeData("music/start/" + formatTitle(playlistName)); } break;
         }
+    }
+
+    private String formatTitle(String title) {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < title.length(); i++) {
+            char c = title.charAt(i);
+            switch (c) {
+                case ' ': str.append("-"); break;
+                case '\'': break;
+                case ':': break;
+                case ',': break;
+                case '.': break;
+                default: str.append(Character.toLowerCase(c));
+            }
+        }
+
+        return str.toString();
     }
 
     public void startLights(View v) { startActivity(new Intent(this, LightsActivity.class)); finish(); }

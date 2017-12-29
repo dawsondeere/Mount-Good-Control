@@ -141,6 +141,16 @@
             />
 
         <ImageView
+            android:id="@+id/buttonStopMusic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_stop"
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
+
+        <ImageView
             android:id="@+id/buttonNextSong"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -165,30 +175,24 @@
     <LinearLayout
         android:id="@+id/musicStartStop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/musicControl"
         >
 
-        <Button
-            android:id="@+id/buttonStartMusic"
+        <Spinner
+            android:id="@+id/spinnerPlaylists"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonStartMusic"
-            android:onClick="sendData"
-            tools:ignore="ButtonStyle"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
             />
 
-        <Button
-            android:id="@+id/buttonStopMusic"
+        <ImageView
+            android:id="@+id/buttonStartMusic"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/buttonStopMusic"
+            android:src="@drawable/mtgd_play"
             android:onClick="sendData"
-            tools:ignore="ButtonStyle"
             />
 
     </LinearLayout>
