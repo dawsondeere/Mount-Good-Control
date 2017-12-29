@@ -1,5 +1,6 @@
 package com.example.dawson.mountgoodcontrol;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,7 +27,7 @@ public class ShowInfoActivity extends AppCompatActivity {
         final String title = getIntent().getExtras().getString("title");
 
         ((TextView) findViewById(R.id.showInfoTitle)).setText(title);
-        ((ImageView) findViewById(R.id.showInfoImage)).setImageResource(getImage(title));
+        ((ImageView) findViewById(R.id.showInfoImage)).setImageResource(getSeasonImgResource(title + " 01"));
 
         populateSpinner(title, getNumSeasons(title));
     }
@@ -78,9 +79,11 @@ public class ShowInfoActivity extends AppCompatActivity {
 
     private void populateScrollView(final String title, final String season) {
         final String seasonNum = season.substring(7);
-        final int resourceID = getEpisodeResource(title + " " + seasonNum);
+        final int epResID = getEpisodeResource(title + " " + seasonNum);
+        final int seasImgID = getSeasonImgResource(title + " " + seasonNum);
+        ((ImageView) findViewById(R.id.showInfoImage)).setImageResource(seasImgID);
 
-        InputStream inputStream = this.getResources().openRawResource(resourceID);
+        InputStream inputStream = this.getResources().openRawResource(epResID);
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         LinearLayout layout = (LinearLayout) findViewById(R.id.episodeLayout);
@@ -120,6 +123,61 @@ public class ShowInfoActivity extends AppCompatActivity {
         }
         catch (IOException e) {
             System.out.println("Error getting episodes from file");
+        }
+    }
+
+    private int getSeasonImgResource(final String title) {
+        switch (title) {
+            case "Avatar: The Last Airbender 01": return R.drawable.tv_medium_avatar_the_last_airbender_01;
+            case "Avatar: The Last Airbender 02": return R.drawable.tv_medium_avatar_the_last_airbender_02;
+            case "Avatar: The Last Airbender 03": return R.drawable.tv_medium_avatar_the_last_airbender_03;
+            case "The Big Bang Theory 01": return R.drawable.tv_medium_the_big_bang_theory_01;
+            case "The Big Bang Theory 02": return R.drawable.tv_medium_the_big_bang_theory_02;
+            case "The Big Bang Theory 03": return R.drawable.tv_medium_the_big_bang_theory_03;
+            case "The Big Bang Theory 04": return R.drawable.tv_medium_the_big_bang_theory_04;
+            case "The Big Bang Theory 05": return R.drawable.tv_medium_the_big_bang_theory_01;
+            case "The Big Bang Theory 06": return R.drawable.tv_medium_the_big_bang_theory_01;
+            case "The Big Bang Theory 07": return R.drawable.tv_medium_the_big_bang_theory_01;
+            case "The Big Bang Theory 08": return R.drawable.tv_medium_the_big_bang_theory_08;
+            case "Duck Dynasty 01": return R.drawable.tv_medium_duck_dynasty_01;
+            case "Duck Dynasty 02": return R.drawable.tv_medium_duck_dynasty_02;
+            case "Duck Dynasty 03": return R.drawable.tv_medium_duck_dynasty_03;
+            case "Friday Night Lights 01": return R.drawable.tv_medium_friday_night_lights_01;
+            case "Friday Night Lights 02": return R.drawable.tv_medium_friday_night_lights_02;
+            case "Friday Night Lights 03": return R.drawable.tv_medium_friday_night_lights_03;
+            case "Friday Night Lights 04": return R.drawable.tv_medium_friday_night_lights;
+            case "Friday Night Lights 05": return R.drawable.tv_medium_friday_night_lights_05;
+            case "Full House 01": return R.drawable.tv_medium_full_house;
+            case "Full House 02": return R.drawable.tv_medium_full_house;
+            case "Full House 03": return R.drawable.tv_medium_full_house;
+            case "Full House 04": return R.drawable.tv_medium_full_house;
+            case "Full House 05": return R.drawable.tv_medium_full_house;
+            case "Full House 06": return R.drawable.tv_medium_full_house;
+            case "Full House 07": return R.drawable.tv_medium_full_house;
+            case "Full House 08": return R.drawable.tv_medium_full_house;
+            case "NCIS 01": return R.drawable.tv_medium_ncis_01;
+            case "NCIS 02": return R.drawable.tv_medium_ncis_02;
+            case "NCIS 03": return R.drawable.tv_medium_ncis_03;
+            case "NCIS 04": return R.drawable.tv_medium_ncis_04;
+            case "NCIS 05": return R.drawable.tv_medium_ncis_05;
+            case "NCIS 06": return R.drawable.tv_medium_ncis_06;
+            case "NCIS 07": return R.drawable.tv_medium_ncis_07;
+            case "NCIS 08": return R.drawable.tv_medium_ncis_08;
+            case "NCIS 09": return R.drawable.tv_medium_ncis_09;
+            case "NCIS 10": return R.drawable.tv_medium_ncis_10;
+            case "Reba 01": return R.drawable.tv_medium_reba_01;
+            case "Reba 02": return R.drawable.tv_medium_reba_02;
+            case "Reba 03": return R.drawable.tv_medium_reba_03;
+            case "Reba 04": return R.drawable.tv_medium_reba_04;
+            case "Reba 05": return R.drawable.tv_medium_reba_05;
+            case "Reba 06": return R.drawable.tv_medium_reba_06;
+            case "White Collar 01": return R.drawable.tv_medium_white_collar_01;
+            case "White Collar 02": return R.drawable.tv_medium_white_collar;
+            case "White Collar 03": return R.drawable.tv_medium_white_collar;
+            case "White Collar 04": return R.drawable.tv_medium_white_collar;
+            case "White Collar 05": return R.drawable.tv_medium_white_collar;
+            case "White Collar 06": return R.drawable.tv_medium_white_collar;
+            default: return -1;
         }
     }
 
@@ -175,20 +233,6 @@ public class ShowInfoActivity extends AppCompatActivity {
             case "White Collar 05": return R.raw.white_collar_s05;
             case "White Collar 06": return R.raw.white_collar_s06;
             default: return -1;
-        }
-    }
-
-    private int getImage(String title) {
-        switch (title) { // TODO: change to medium
-            case "Avatar: The Last Airbender": return R.drawable.tv_small_avatar_the_last_airbender;
-            case "The Big Bang Theory": return R.drawable.tv_small_the_big_bang_theory;
-            case "Duck Dynasty": return R.drawable.tv_small_duck_dynasty;
-            case "Friday Night Lights": return R.drawable.tv_small_friday_night_lights;
-            case "Full House": return R.drawable.tv_small_full_house;
-            case "NCIS": return R.drawable.tv_small_ncis;
-            case "Reba": return R.drawable.tv_small_reba;
-            case "White Collar": return R.drawable.tv_small_white_collar;
-            default: return R.drawable.small_no_image;
         }
     }
 
