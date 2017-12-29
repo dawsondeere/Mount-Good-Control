@@ -133,15 +133,15 @@ public class ShowsActivity extends AppCompatActivity implements View.OnTouchList
 
     private int getImage(String title) {
         switch (title) {
-            case "Avatar: The Last Airbender": return R.drawable.tv_small_avatar_the_last_airbender;
-            case "The Big Bang Theory": return R.drawable.tv_small_the_big_bang_theory;
-            case "Duck Dynasty": return R.drawable.tv_small_duck_dynasty;
-            case "Friday Night Lights": return R.drawable.tv_small_friday_night_lights;
-            case "Full House": return R.drawable.tv_small_full_house;
-            case "NCIS": return R.drawable.tv_small_ncis;
-            case "Reba": return R.drawable.tv_small_reba;
-            case "White Collar": return R.drawable.tv_small_white_collar;
-            default: return R.drawable.small_no_image;
+            case "Avatar: The Last Airbender": return R.drawable.tv_medium_avatar_the_last_airbender;
+            case "The Big Bang Theory": return R.drawable.tv_medium_the_big_bang_theory_01;
+            case "Duck Dynasty": return R.drawable.tv_medium_duck_dynasty_01;
+            case "Friday Night Lights": return R.drawable.tv_medium_friday_night_lights;
+            case "Full House": return R.drawable.tv_medium_full_house;
+            case "NCIS": return R.drawable.tv_medium_ncis_01;
+            case "Reba": return R.drawable.tv_medium_reba_01;
+            case "White Collar": return R.drawable.tv_medium_white_collar;
+            default: return R.drawable.medium_no_image;
         }
     }
 
