@@ -14,7 +14,8 @@ E13: The Firebending Masters
 E14: The Boiling Rock: Part 1
 E15: The Boiling Rock: Part 2
 E16: The Southern Raiders
-E17: Sozin's Comet: Part 1 - The Phoenix King
-E18: Sozin's Comet: Part 2 - The Old Masters
-E19: Sozin's Comet: Part 3 - Into the Inferno
-E20: Sozin's Comet: Part 4 - Avatar Aang
+E17: The Ember Island Players
+E18: Sozin's Comet: Part 1 - The Phoenix King
+E19: Sozin's Comet: Part 2 - The Old Masters
+E20: Sozin's Comet: Part 3 - Into the Inferno
+E21: Sozin's Comet: Part 4 - Avatar Aang
