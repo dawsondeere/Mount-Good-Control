@@ -6,11 +6,14 @@ The Blind Side
 The Bourne Identity
 The Bourne Supremacy
 The Bourne Ultimatum
+Braveheart
 A Bug's Life
 Butch Cassidy and the Sundance Kid
 Cars
+The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
 The Dark Knight
 The Dark Knight Rises
+Dodgeball
 The Fast and the Furious
 2 Fast 2 Furious
 The Fast and the Furious: Tokyo Drift
@@ -19,6 +22,7 @@ Fast Five
 Fast & Furious 6
 Furious 7
 Finding Nemo
+Friday Night Lights
 Frozen
 Harry Potter and the Sorcerer's Stone
 Harry Potter and the Chamber of Secrets
@@ -36,7 +40,9 @@ The Hunger Games
 The Hunger Games: Catching Fire
 The Hunger Games: Mockingjay part 1
 The Hunger Games: Mockingjay part 2
+Inception
 The Incredibles
+Independence Day
 Indiana Jones and the Raiders of the Lost Ark
 Indiana Jones and the Temple of Doom
 Indiana Jones and the Last Crusade
@@ -46,6 +52,7 @@ It's a Wonderful Life
 Jurassic Park
 Jurassic Park 2
 Jurassic Park 3
+The League of Extraordinary Gentlemen
 The Lion King
 The Lord of the Rings: The Fellowship of the Ring
 The Lord of the Rings: The Two Towers
@@ -55,9 +62,17 @@ The Mighty Ducks 2
 The Mighty Ducks 3
 Miracle on 34th Street
 Monsters, Inc.
+The Patriot
+The Pink Panther
 Pirates of the Caribbean: Curse of the Black Pearl
+The Princess Bride
+Radio
 Remember the Titans
+Rush Hour
+Rush Hour 2
+The Sandlot
 The Santa Clause
+Space Jam
 Star Trek
 Star Trek: Into Darkness
 Star Wars: The Phantom Menace
@@ -71,6 +86,7 @@ Rogue One
 Toy Story
 Toy Story 2
 Transformers
+We Are Marshall
 White Christmas
 X-Men
 X-Men 2

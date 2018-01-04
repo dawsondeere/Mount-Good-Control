@@ -6,11 +6,14 @@ The Blind Side - 128,PG-13
 The Bourne Identity - 118,PG-13
 The Bourne Supremacy - 109,PG-13
 The Bourne Ultimatum - 115,PG-13
+Braveheart - 178,R
 A Bug's Life - 95,G
 Butch Cassidy and the Sundance Kid - 110,PG
 Cars - 117,G
+The Chronicles of Narnia: The Lion, the Witch and the Wardrobe - 143,PG
 The Dark Knight - 152,PG-13
 The Dark Knight Rises - 165,PG-13
+Dodgeball - 92,PG-13
 The Fast and the Furious - 107,PG-13
 2 Fast 2 Furious - 108,PG-13
 The Fast and the Furious: Tokyo Drift - 104,PG-13
@@ -19,6 +22,7 @@ Fast Five - 130,PG-13
 Fast & Furious 6 - 130,PG-13
 Furious 7 - 137,PG-13
 Finding Nemo - 101,G
+Friday Night Lights - 118,PG-13
 Frozen - 102,PG
 Harry Potter and the Sorcerer's Stone - 152,PG
 Harry Potter and the Chamber of Secrets - 161,PG
@@ -28,15 +32,17 @@ Harry Potter and the Order of the Phoenix - 138,PG-13
 Harry Potter and the Half-Blood Prince - 153,PG
 Harry Potter and the Deathly Hallows part 1 - 146,PG-13
 Harry Potter and the Deathly Hallows part 2 - zzz,PG-13
-The Hobbit: An Unexpected Journey - zzz,PG-13
-The Hobbit: The Desolation of Smaug - zzz,PG-13
-The Hobbit: The Battle of the Five Armies - zzz,PG-13
+The Hobbit: An Unexpected Journey - 183,PG-13
+The Hobbit: The Desolation of Smaug - 187,PG-13
+The Hobbit: The Battle of the Five Armies - 164,PG-13
 Home Alone - 103,PG
 The Hunger Games - 143,PG-13
 The Hunger Games: Catching Fire - 146,PG-13
 The Hunger Games: Mockingjay part 1 - 123,PG-13
 The Hunger Games: Mockingjay part 2 - 137,PG-13
+Inception - 148,PG-13
 The Incredibles - 115,PG
+Independence Day - 153,PG-13
 Indiana Jones and the Raiders of the Lost Ark - 115,PG
 Indiana Jones and the Temple of Doom - 118,PG
 Indiana Jones and the Last Crusade - 127,PG-13
@@ -46,6 +52,7 @@ It's a Wonderful Life - 131,PG
 Jurassic Park - 126,PG-13
 Jurassic Park 2 - 129,PG-13
 Jurassic Park 3 - 92,PG-13
+The League of Extraordinary Gentlemen - 110,PG-13
 The Lion King - 89,G
 The Lord of the Rings: The Fellowship of the Ring - 228,PG-13
 The Lord of the Rings: The Two Towers - 235,PG-13
@@ -55,9 +62,17 @@ The Mighty Ducks 2 - 107,PG
 The Mighty Ducks 3 - 104,PG
 Miracle on 34th Street - 96,NR
 Monsters, Inc. - 92,G
+The Patriot - 165,R
+The Pink Panther - 93,PG
 Pirates of the Caribbean: Curse of the Black Pearl - 143,PG-13
+The Princess Bride - 98,PG
+Radio - 109,PG
 Remember the Titans - 114,PG
+Rush Hour - 98,PG-13
+Rush Hour 2 - 90,PG-13
+The Sandlot - 101,PG
 The Santa Clause - 97,PG
+Space Jam - 87,PG
 Star Trek - 127,PG-13
 Star Trek: Into Darkness - 132,PG-13
 Star Wars: The Phantom Menace - 136,PG
@@ -71,6 +86,7 @@ Rogue One - 134,PG-13
 Toy Story - 81,G
 Toy Story 2 - 92,G
 Transformers - 143,PG-13
+We Are Marshall - 132,PG
 White Christmas - 120,NR
 X-Men - 104,PG-13
 X-Men 2 - 134,PG-13
