@@ -91,6 +91,25 @@
             />
 
         <ImageView
+            android:id="@+id/buttonBackDoor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_back_door_bl"
+            android:onClick="sendData"
+            tools:ignore="ButtonStyle"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/outletsControl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/lightsControl"
+        >
+
+        <ImageView
             android:id="@+id/buttonLamp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -126,7 +145,7 @@
         android:id="@+id/textWhosHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lightsControl"
+        android:layout_below="@id/outletsControl"
         android:gravity="center_horizontal"
         android:lines="4"
         android:textColor="@color/colorPrimary"

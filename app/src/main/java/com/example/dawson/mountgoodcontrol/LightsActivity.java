@@ -1,6 +1,7 @@
 package com.example.dawson.mountgoodcontrol;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -155,6 +156,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                 case "lamp": updateLights((ImageView) findViewById(R.id.buttonLamp), stat); break;
                 case "storm": updateLights((ImageView) findViewById(R.id.buttonStorm), stat); break;
                 case "aggies": updateLights((ImageView) findViewById(R.id.buttonAggies), stat); break;
+                case "back-door": updateLights((ImageView) findViewById(R.id.buttonBackDoor), stat); break;
             }
         }
     }
@@ -166,6 +168,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                 case R.id.buttonLamp: button.setImageResource(R.drawable.mtgd_lamp_ma); break;
                 case R.id.buttonStorm: button.setImageResource(R.drawable.mtgd_storm_ma); break;
                 case R.id.buttonAggies: button.setImageResource(R.drawable.mtgd_aggies_ma); break;
+                case R.id.buttonBackDoor: button.setImageResource(R.drawable.mtgd_back_door_ma); break;
             }
         }
         else if (stat.equals("OFF")) {
@@ -174,6 +177,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
                 case R.id.buttonLamp: button.setImageResource(R.drawable.mtgd_lamp_bl); break;
                 case R.id.buttonStorm: button.setImageResource(R.drawable.mtgd_storm_bl); break;
                 case R.id.buttonAggies: button.setImageResource(R.drawable.mtgd_aggies_bl); break;
+                case R.id.buttonBackDoor: button.setImageResource(R.drawable.mtgd_back_door_bl); break;
             }
         }
     }
@@ -189,6 +193,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
             case R.id.buttonLamp: MainActivity.writeData("lights/lamp/toggle"); break;
             case R.id.buttonStorm: MainActivity.writeData("lights/storm/toggle"); break;
             case R.id.buttonAggies: MainActivity.writeData("lights/aggies/toggle"); break;
+            case R.id.buttonBackDoor: MainActivity.writeData("lights/back-door/toggle"); break;
         }
     }
 
