@@ -78,6 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/buttonSwitches"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         >
 
@@ -115,6 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/buttonRemoteOne"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         >
 
@@ -174,54 +176,71 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonNextEpisode"
+    <LinearLayout
+        android:id="@+id/buttonRemoteTwo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/buttonSkips"
-        android:textColor="@color/colorPrimary"
-        android:text="Play next episode"
-        android:onClick="sendData"
-        />
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
 
-    <Button
-        android:id="@+id/buttonNextSeason"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonNextEpisode"
-        android:textColor="@color/colorPrimary"
-        android:text="Play next season"
-        android:onClick="sendData"
-        />
+        <ImageView
+            android:id="@+id/buttonNextEpisode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_next_episode"
+            android:onClick="sendData"
+            />
 
-    <Button
-        android:id="@+id/buttonToggleSubtitles"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonNextSeason"
-        android:textColor="@color/colorPrimary"
-        android:text="Toggle Subtitles"
-        android:onClick="sendData"
-        />
+        <ImageView
+            android:id="@+id/buttonNextSeason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_next_season"
+            android:onClick="sendData"
+            />
 
-    <Button
-        android:id="@+id/buttonMoveMouse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonToggleSubtitles"
-        android:textColor="@color/colorPrimary"
-        android:text="Move mouse"
-        android:onClick="sendData"
-        />
+        <ImageView
+            android:id="@+id/buttonMovieStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_stop"
+            android:onClick="sendData"
+            />
 
-    <Button
-        android:id="@+id/buttonMovieStop"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonRemoteThree"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonMoveMouse"
-        android:textColor="@color/colorPrimary"
-        android:text="Stop"
-        android:onClick="sendData"
-        />
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonRemoteTwo"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/buttonToggleSubtitles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_subtitles"
+            android:onClick="sendData"
+            />
+
+        <ImageView
+            android:id="@+id/buttonMoveMouse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/mtgd_mouse"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
