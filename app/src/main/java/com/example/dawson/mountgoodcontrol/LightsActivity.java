@@ -141,7 +141,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
         int swEnd = -1;
         int stStart = -1;
         int stEnd = -1;
-        for (int i = 0; i < 4; i++) {
+        while (stEnd != buffer.length() - 1) {
             swStart = stEnd + 1;
             swEnd = buffer.indexOf(':', swStart);
             stStart = swEnd + 2;
