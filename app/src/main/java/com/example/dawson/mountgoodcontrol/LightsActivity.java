@@ -93,7 +93,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getLightData(String url) {
-        String finalurl = "http://" + MainActivity.IP + ":5000/" + url;
+        String finalurl = "http://" + MainActivity.IP + ":5555/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -115,7 +115,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getWhosHomeData(String url) {
-        String finalurl = "http://" + MainActivity.IP + ":5000/" + url;
+        String finalurl = "http://" + MainActivity.IP + ":5555/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -189,11 +189,11 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
 
     public void sendData(View v) {
         switch (v.getId()) {
-            case R.id.buttonMainLight: MainActivity.writeData("lights/living/toggle"); break;
-            case R.id.buttonLamp: MainActivity.writeData("lights/lamp/toggle"); break;
-            case R.id.buttonStorm: MainActivity.writeData("lights/storm/toggle"); break;
-            case R.id.buttonAggies: MainActivity.writeData("lights/aggies/toggle"); break;
-            case R.id.buttonBackDoor: MainActivity.writeData("lights/back-door/toggle"); break;
+            case R.id.buttonMainLight: MainActivity.writeLightData("lights/living/toggle"); break;
+            case R.id.buttonLamp: MainActivity.writeLightData("lights/lamp/toggle"); break;
+            case R.id.buttonStorm: MainActivity.writeLightData("lights/storm/toggle"); break;
+            case R.id.buttonAggies: MainActivity.writeLightData("lights/aggies/toggle"); break;
+            case R.id.buttonBackDoor: MainActivity.writeLightData("lights/back-door/toggle"); break;
         }
     }
 

@@ -20,7 +20,29 @@ public class MainActivity extends AppCompatActivity {
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
-    public static void writeData(String url) {
+    public static void writeLightData(String url) {
+        String finalurl = "http://" + IP + ":5555/" + url;
+        //System.out.println(finalurl);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        //System.out.println("Response is: "+ response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("That didn't work!");
+                    }
+                }
+        );
+
+        stringRequest.setRetryPolicy(retryPolicy);
+        queue.add(stringRequest);
+    }
+
+    public static void writeMusicData(String url) {
         String finalurl = "http://" + IP + ":5000/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,

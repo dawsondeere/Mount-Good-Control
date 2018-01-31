@@ -181,13 +181,13 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
 
     public void sendData(View v) {
         switch (v.getId()) {
-            case R.id.buttonPlayPause: MainActivity.writeData("music/play"); break;
-            case R.id.buttonPrevSong: MainActivity.writeData("music/prev"); break;
-            case R.id.buttonNextSong: MainActivity.writeData("music/next"); break;
-            case R.id.buttonVolDown: MainActivity.writeData("music/volDown"); break;
-            case R.id.buttonVolUp: MainActivity.writeData("music/volUp"); break;
-            case R.id.buttonStopMusic: MainActivity.writeData("music/stop"); break;
-            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeData("music/start/" + formatTitle(playlistName)); } break;
+            case R.id.buttonPlayPause: MainActivity.writeMusicData("music/play"); break;
+            case R.id.buttonPrevSong: MainActivity.writeMusicData("music/prev"); break;
+            case R.id.buttonNextSong: MainActivity.writeMusicData("music/next"); break;
+            case R.id.buttonVolDown: MainActivity.writeMusicData("music/volDown"); break;
+            case R.id.buttonVolUp: MainActivity.writeMusicData("music/volUp"); break;
+            case R.id.buttonStopMusic: MainActivity.writeMusicData("music/stop"); break;
+            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeMusicData("music/start/" + formatTitle(playlistName)); } break;
         }
     }
 
