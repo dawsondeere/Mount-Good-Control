@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/home/dawson/extras/MountGoodControl/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/dawson/Mount-Good-Control/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="644d23eafcaf0a796fe0f18e61f127396e39f737">
-        <dex dex="/home/dawson/extras/MountGoodControl/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4b4e74c96726b9199869f09ace9c1626a89bfb1f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/dawson/extras/MountGoodControl/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/dawson/extras/MountGoodControl/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_1af74cd7b22ca407b94a0d19181f37512a803647/classes.dex" />
+        sha1="556e4952bcbc7a4fa43171d71707459dd3c5607f">
+        <dex dex="/home/dawson/Mount-Good-Control/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b5fb30bbf100a6c81a94deb746c662f0e81db036/classes.dex" />
     </item>
 
 </items>
