@@ -187,7 +187,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
             case R.id.buttonVolDown: MainActivity.writeMusicData("music/volDown"); break;
             case R.id.buttonVolUp: MainActivity.writeMusicData("music/volUp"); break;
             case R.id.buttonStopMusic: MainActivity.writeMusicData("music/stop"); break;
-            case R.id.buttonStartMusic: if (((TextView) findViewById(R.id.songName)).getText().toString().contains("No song")) { MainActivity.writeMusicData("music/start/" + formatTitle(playlistName)); } break;
+            case R.id.buttonStartMusic: MainActivity.writeMusicData("music/start/" + formatTitle(playlistName)); break;
         }
     }
 
