@@ -16,19 +16,19 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
     public static String IP = "";
+    public static String portLights = "";
+    public static String portMusic = "";
+    public static String portMovies = "";
     public static final String PREF_NAME = "com.dawson.mtgdctl.PREF";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
     public static void writeLightData(String url) {
-        String finalurl = "http://" + IP + ":5555/" + url;
-        //System.out.println(finalurl);
+        String finalurl = "http://" + IP + ":" + portLights + "/" + url;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
-                        //System.out.println("Response is: "+ response);
-                    }
+                    public void onResponse(String response) {}
                 },
                 new Response.ErrorListener() {
                     @Override
@@ -43,14 +43,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void writeMusicData(String url) {
-        String finalurl = "http://" + IP + ":5000/" + url;
+        String finalurl = "http://" + IP + ":" + portMusic + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
-                        //System.out.println("Response is: "+ response);
-                    }
+                    public void onResponse(String response) {}
                 },
                 new Response.ErrorListener() {
                     @Override
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void writeMovieData(String url) {
-        String finalurl = "http://" + IP + ":5050/" + url;
+        String finalurl = "http://" + IP + ":" + portMovies + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -90,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         IP = getSharedPreferences(PREF_NAME, 0).getString("IP", "");
+        portLights = getSharedPreferences(PREF_NAME, 0).getString("Light port", "");
+        portMusic = getSharedPreferences(PREF_NAME, 0).getString("Music port", "");
+        portMovies = getSharedPreferences(PREF_NAME, 0).getString("Movie port", "");
         queue = Volley.newRequestQueue(this);
         startActivity(new Intent(this, LightsActivity.class));
     }

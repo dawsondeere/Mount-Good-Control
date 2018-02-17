@@ -33,14 +33,23 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     protected void onStart() {
         super.onStart();
         ((EditText) findViewById(R.id.editIP)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editPortLights)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light port", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editPortMusic)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music port", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editPortMovies)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie port", ""), TextView.BufferType.NORMAL);
     }
 
     @Override
     protected void onStop() {
         SharedPreferences.Editor editor = getSharedPreferences(MainActivity.PREF_NAME, 0).edit();
         editor.putString("IP", ((EditText) findViewById(R.id.editIP)).getText().toString());
+        editor.putString("Light port", ((EditText) findViewById(R.id.editPortLights)).getText().toString());
+        editor.putString("Music port", ((EditText) findViewById(R.id.editPortMusic)).getText().toString());
+        editor.putString("Movie port", ((EditText) findViewById(R.id.editPortMovies)).getText().toString());
         editor.commit();
         MainActivity.IP = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", "");
+        MainActivity.portLights = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light port", "");
+        MainActivity.portMusic = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music port", "");
+        MainActivity.portMovies = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie port", "");
         super.onStop();
     }
 

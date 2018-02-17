@@ -93,7 +93,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getLightData(String url) {
-        String finalurl = "http://" + MainActivity.IP + ":5555/" + url;
+        String finalurl = "http://" + MainActivity.IP + ":" + MainActivity.portLights + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -115,7 +115,7 @@ public class LightsActivity extends AppCompatActivity implements View.OnTouchLis
     }
 
     public void getWhosHomeData(String url) {
-        String finalurl = "http://" + MainActivity.IP + ":5555/" + url;
+        String finalurl = "http://" + MainActivity.IP + ":" + MainActivity.portLights + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
