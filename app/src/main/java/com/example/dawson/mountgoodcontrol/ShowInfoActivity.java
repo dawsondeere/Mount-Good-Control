@@ -1,5 +1,6 @@
 package com.example.dawson.mountgoodcontrol;
 
+import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -96,6 +97,7 @@ public class ShowInfoActivity extends AppCompatActivity {
                 LinearLayout linLay = new LinearLayout(this);
                 linLay.setOrientation(LinearLayout.HORIZONTAL);
                 linLay.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                linLay.setBackgroundResource(R.drawable.menu_background);
 
                 TextView epTitle = new TextView(this);
                 epTitle.setText(line);
