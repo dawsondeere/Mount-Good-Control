@@ -49,6 +49,16 @@ public class MovieRemoteActivity extends AppCompatActivity implements View.OnTou
             case R.id.buttonToggleSubtitles: MainActivity.writeMovieData("remote/toggleSubtitle"); break;
             case R.id.buttonMoveMouse: MainActivity.writeMovieData("remote/moveMouse"); break;
             case R.id.buttonMovieStop: MainActivity.writeMovieData("remote/stop"); break;
+            case R.id.buttonTVPower: MainActivity.writeMovieData("tv-remote/power"); break;
+            case R.id.buttonTVInput: MainActivity.writeMovieData("tv-remote/input"); break;
+            case R.id.buttonTVMute: MainActivity.writeMovieData("tv-remote/mute"); break;
+            case R.id.buttonTVVolDown: MainActivity.writeMovieData("tv-remote/vol-down"); break;
+            case R.id.buttonTVVolUp: MainActivity.writeMovieData("tv-remote/vol-up"); break;
+            case R.id.buttonTVOk: MainActivity.writeMovieData("tv-remote/ok"); break;
+            case R.id.buttonTVArrowUp: MainActivity.writeMovieData("tv-remote/arrow-up"); break;
+            case R.id.buttonTVArrowDown: MainActivity.writeMovieData("tv-remote/arrow-down"); break;
+            case R.id.buttonTVArrowLeft: MainActivity.writeMovieData("tv-remote/arrow-left"); break;
+            case R.id.buttonTVArrowRight: MainActivity.writeMovieData("tv-remote/arrow-right"); break;
         }
     }
 

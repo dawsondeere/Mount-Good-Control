@@ -243,4 +243,177 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/buttonTVRemoteOne"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonRemoteThree"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonTVPower"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Power"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonTVInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Input"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTVRemoteTwo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonTVRemoteOne"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonTVMute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mute"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonTVVolDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vol Down"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonTVVolUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vol Up"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTVRemoteArrowsOne"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonTVRemoteTwo"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+
+        <Button
+            android:id="@+id/buttonTVArrowUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Up"
+            android:onClick="sendData"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTVRemoteArrowsTwo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonTVRemoteArrowsOne"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonTVArrowLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Left"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonTVOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ok"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonTVArrowRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Right"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonTVRemoteArrowsThree"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/buttonTVRemoteArrowsTwo"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+
+        <Button
+            android:id="@+id/buttonTVArrowDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Down"
+            android:onClick="sendData"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            />
+
+    </LinearLayout>
+
 </RelativeLayout>
