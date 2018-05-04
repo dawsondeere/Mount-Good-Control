@@ -197,4 +197,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/buttonDesktops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/musicStartStop"
+        >
+
+        <Button
+            android:id="@+id/buttonPrevDesktop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prev Desktop"
+            android:textColor="@color/colorPrimary"
+            android:onClick="sendData"
+            />
+
+        <Button
+            android:id="@+id/buttonNextDesktop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next Desktop"
+            android:textColor="@color/colorPrimary"
+            android:onClick="sendData"
+            />
+
+    </LinearLayout>
+
 </RelativeLayout>
