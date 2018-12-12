@@ -64,4 +64,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     public void startMovies(View v) { startActivity(new Intent(this, MoviesActivity.class)); finish(); }
     public void startShows(View v) { startActivity(new Intent(this, ShowsActivity.class)); finish(); }
     public void startRemote(View v) { startActivity(new Intent(this, MovieRemoteActivity.class)); finish(); }
+    public void shutdownJuke(View v) { MainActivity.writeMusicData("music/shutdown"); }
+    public void restartJuke(View v) { MainActivity.writeMusicData("music/restart"); }
 }

@@ -173,4 +173,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/rowJukeControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rowPortMovies"
+        >
+
+        <Button
+            android:id="@+id/buttonShutdownJuke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:text="Shutdown JukeBerry"
+            android:onClick="shutdownJuke"
+            />
+
+        <Button
+            android:id="@+id/buttonRestartJuke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:text="Restart JukeBerry"
+            android:onClick="restartJuke"
+            />
+
+    </LinearLayout>
+
 </RelativeLayout>
