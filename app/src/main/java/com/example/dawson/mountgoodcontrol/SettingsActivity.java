@@ -32,24 +32,21 @@ public class SettingsActivity extends AppCompatActivity implements View.OnTouchL
     @Override
     protected void onStart() {
         super.onStart();
-        ((EditText) findViewById(R.id.editIP)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", ""), TextView.BufferType.NORMAL);
-        ((EditText) findViewById(R.id.editPortLights)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light port", ""), TextView.BufferType.NORMAL);
-        ((EditText) findViewById(R.id.editPortMusic)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music port", ""), TextView.BufferType.NORMAL);
-        ((EditText) findViewById(R.id.editPortMovies)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie port", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editAddrLights)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light address", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editAddrMusic)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music address", ""), TextView.BufferType.NORMAL);
+        ((EditText) findViewById(R.id.editAddrMovies)).setText(getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie address", ""), TextView.BufferType.NORMAL);
     }
 
     @Override
     protected void onStop() {
         SharedPreferences.Editor editor = getSharedPreferences(MainActivity.PREF_NAME, 0).edit();
-        editor.putString("IP", ((EditText) findViewById(R.id.editIP)).getText().toString());
-        editor.putString("Light port", ((EditText) findViewById(R.id.editPortLights)).getText().toString());
-        editor.putString("Music port", ((EditText) findViewById(R.id.editPortMusic)).getText().toString());
-        editor.putString("Movie port", ((EditText) findViewById(R.id.editPortMovies)).getText().toString());
+        editor.putString("Light address", ((EditText) findViewById(R.id.editAddrLights)).getText().toString());
+        editor.putString("Music address", ((EditText) findViewById(R.id.editAddrMusic)).getText().toString());
+        editor.putString("Movie address", ((EditText) findViewById(R.id.editAddrMovies)).getText().toString());
         editor.commit();
-        MainActivity.IP = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("IP", "");
-        MainActivity.portLights = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light port", "");
-        MainActivity.portMusic = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music port", "");
-        MainActivity.portMovies = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie port", "");
+        MainActivity.addrLights = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Light address", "");
+        MainActivity.addrMusic = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Music address", "");
+        MainActivity.addrMovies = getSharedPreferences(MainActivity.PREF_NAME, 0).getString("Movie address", "");
         super.onStop();
     }
 

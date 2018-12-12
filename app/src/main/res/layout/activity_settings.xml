@@ -74,23 +74,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/rowIP"
+        android:id="@+id/rowAddrLights"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonSwitches"
         >
 
         <TextView
-            android:id="@+id/textIP"
+            android:id="@+id/textAddrLights"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
-            android:text="IP address:"
+            android:text="Light server address:"
             android:lines="1"
             />
 
         <EditText
-            android:id="@+id/editIP"
+            android:id="@+id/editAddrLights"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -99,23 +99,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/rowPortLights"
+        android:id="@+id/rowAddrMusic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rowIP"
+        android:layout_below="@id/rowAddrLights"
         >
 
         <TextView
-            android:id="@+id/textPortLights"
+            android:id="@+id/textAddrMusic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
-            android:text="Light server port:"
+            android:text="Music server address:"
             android:lines="1"
             />
 
         <EditText
-            android:id="@+id/editPortLights"
+            android:id="@+id/editAddrMusic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -124,48 +124,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/rowPortMusic"
+        android:id="@+id/rowAddrMovies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rowPortLights"
+        android:layout_below="@id/rowAddrMusic"
         >
 
         <TextView
-            android:id="@+id/textPortMusic"
+            android:id="@+id/textAddrMovies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
-            android:text="Music server port:"
+            android:text="Movie server address:"
             android:lines="1"
             />
 
         <EditText
-            android:id="@+id/editPortMusic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/rowPortMovies"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rowPortMusic"
-        >
-
-        <TextView
-            android:id="@+id/textPortMovies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:text="Movie server port:"
-            android:lines="1"
-            />
-
-        <EditText
-            android:id="@+id/editPortMovies"
+            android:id="@+id/editAddrMovies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -177,7 +152,7 @@
         android:id="@+id/rowJukeControl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rowPortMovies"
+        android:layout_below="@id/rowAddrMovies"
         >
 
         <Button

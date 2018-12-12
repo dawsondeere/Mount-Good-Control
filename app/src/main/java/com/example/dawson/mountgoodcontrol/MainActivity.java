@@ -15,16 +15,15 @@ import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
     public static RequestQueue queue;
-    public static String IP = "";
-    public static String portLights = "";
-    public static String portMusic = "";
-    public static String portMovies = "";
+    public static String addrLights = "";
+    public static String addrMusic = "";
+    public static String addrMovies = "";
     public static final String PREF_NAME = "com.dawson.mtgdctl.PREF";
     public static final float SWIPE_THRESHOLD_VELOCITY = 200;
     public static final DefaultRetryPolicy retryPolicy = new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
 
     public static void writeLightData(String url) {
-        String finalurl = "http://" + IP + ":" + portLights + "/" + url;
+        String finalurl = "http://" + addrLights + "/" + url;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
                     @Override
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void writeMusicData(String url) {
-        String finalurl = "http://" + IP + ":" + portMusic + "/" + url;
+        String finalurl = "http://" + addrMusic + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void writeMovieData(String url) {
-        String finalurl = "http://" + IP + ":" + portMovies + "/" + url;
+        String finalurl = "http://" + addrMovies + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
@@ -87,10 +86,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        IP = getSharedPreferences(PREF_NAME, 0).getString("IP", "");
-        portLights = getSharedPreferences(PREF_NAME, 0).getString("Light port", "");
-        portMusic = getSharedPreferences(PREF_NAME, 0).getString("Music port", "");
-        portMovies = getSharedPreferences(PREF_NAME, 0).getString("Movie port", "");
+        addrLights = getSharedPreferences(PREF_NAME, 0).getString("Light address", "");
+        addrMusic = getSharedPreferences(PREF_NAME, 0).getString("Music address", "");
+        addrMovies = getSharedPreferences(PREF_NAME, 0).getString("Movie address", "");
         queue = Volley.newRequestQueue(this);
         startActivity(new Intent(this, LightsActivity.class));
     }

@@ -137,7 +137,7 @@ public class MusicActivity extends AppCompatActivity implements View.OnTouchList
     }
 
     public void getData(String url) {
-        String finalurl = "http://" + MainActivity.IP + ":" + MainActivity.portMusic + "/" + url;
+        String finalurl = "http://" + MainActivity.addrMusic + "/" + url;
         //System.out.println(finalurl);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, finalurl,
                 new Response.Listener<String>() {
